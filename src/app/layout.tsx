@@ -11,7 +11,7 @@ const openSans = Open_Sans({
 
 const title = 'NEXT English Institute | Instituto de inglés en Ezeiza, La Unión';
 const description =
-  'Clases de inglés presenciales y online en Ezeiza, La Unión, Buenos Aires. Grupos reducidos, docentes certificados y preparación para Cambridge, TOEFL e IELTS. Test de nivel gratuito.';
+  'Clases de inglés presenciales y online en Ezeiza, La Unión, Buenos Aires. Grupos reducidos, docentes certificados y preparación de exámenes internacionales. Test de nivel gratuito.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
