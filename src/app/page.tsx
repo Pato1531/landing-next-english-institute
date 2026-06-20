@@ -75,7 +75,7 @@ export default function HomePage() {
           </h2>
           <p className="mx-auto mb-5 max-w-md text-sm leading-relaxed text-ink-secondary">
             Hacé el test de nivel gratuito en línea — tarda 15 minutos — y te recomendamos el
-            curso ideal para vos. Sin compromiso.
+            curso ideal para vos.
           </p>
           <a
             href="#contacto"
