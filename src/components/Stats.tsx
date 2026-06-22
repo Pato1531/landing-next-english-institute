@@ -18,7 +18,7 @@ type TextStat = {
 type Stat = CounterStat | TextStat;
 
 const stats: Stat[] = [
-  { type: 'counter', value: 1000, suffix: '+', label: 'alumnos formados' },
+  { type: 'counter', value: 1000, suffix: '', label: 'alumnos formados' },
   { type: 'counter', value: 3, suffix: '', label: 'años de experiencia' },
   { type: 'text', display: '✓', label: 'Validez internacional' },
 ];
