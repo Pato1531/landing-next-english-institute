@@ -2,12 +2,12 @@ import ImagePlaceholder from './ImagePlaceholder';
 
 const features = [
   {
-    title: 'Docentes certificados',
-    desc: 'Profesores con certificaciones internacionales y amplia experiencia en la enseñanza del idioma.',
+    title: 'Docentes calificados',
+    desc: 'Profesores preparados y con experiencia en la enseñanza del idioma.',
   },
   {
     title: 'Grupos reducidos',
-    desc: 'Máximo 8 alumnos por clase para garantizar atención personalizada y mejor aprendizaje.',
+    desc: 'Limitamos las inscripciones para garantizar atención personalizada y mejor aprendizaje.',
   },
   {
     title: 'Presencial y online',
@@ -15,7 +15,7 @@ const features = [
   },
   {
     title: 'Certificaciones',
-    desc: 'Preparación para exámenes internacionales como Cambridge, TOEFL e IELTS.',
+    desc: 'Nuestro programa esta avalado por el C.I.O.L ( Instituto linguistico del Reino Unido ), tiene reconocimiento internacional.',
   },
 ];
 
