@@ -6,6 +6,7 @@ export type Slide = {
   ctaHref: string;
   imageAlt: string;
   imagePrompt: string;
+  imageSrc?: string;
 };
 
 /**
@@ -39,6 +40,7 @@ export const heroSlides: Slide[] = [
     imageAlt: 'Docente interactuando con alumnos en un aula moderna del instituto',
     imagePrompt:
       'Modern english classroom, teacher helping students, teenagers learning english, warm lighting, premium education environment, Argentina, candid photography, natural expressions, shallow depth of field',
+    imageSrc: '/images/hero/slide-1.jpg',
   },
   {
     badge: '🎯 Propuesta especializada',
@@ -49,6 +51,7 @@ export const heroSlides: Slide[] = [
     imageAlt: 'Grupo de alumnos participando de un taller temático de inglés',
     imagePrompt:
       'Diverse group of young adults in a themed english workshop, business and travel vocabulary on whiteboard, warm natural light, candid photography, premium education environment, Argentina',
+    imageSrc: '/images/hero/slide-2.jpg',
   },
   {
     badge: '✅ Gratis · Sin compromiso',

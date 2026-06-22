@@ -1,6 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 import { heroSlides } from '@/data/hero';
 import ImagePlaceholder from './ImagePlaceholder';
 
@@ -69,7 +70,17 @@ export default function HeroSlider() {
             aria-hidden={i !== index}
           >
             <div className="absolute inset-0 -z-10">
-              <ImagePlaceholder alt={slide.imageAlt} aspect="video" className="h-full w-full" />
+              {slide.imageSrc ? (
+                <Image
+                  src={slide.imageSrc}
+                  alt={slide.imageAlt}
+                  fill
+                  priority={i === 0}
+                  className="object-cover"
+                />
+              ) : (
+                <ImagePlaceholder alt={slide.imageAlt} aspect="video" className="h-full w-full" />
+              )}
             </div>
             <div
               aria-hidden
