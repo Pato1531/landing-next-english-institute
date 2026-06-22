@@ -12,32 +12,32 @@ export type Curso = {
  */
 export const cursos: Curso[] = [
   {
-    slug: 'principiante',
-    tag: 'Desde cero',
+    slug: 'Nivel Inicial',
+    tag: 'Nivel Inicial',
     title: 'Principiante',
     description:
-      'Vocabulario, gramática base y pronunciación. Ideal si nunca estudiaste inglés o necesitás retomarlo desde el inicio.',
+      'Ideal si nunca estudiaste inglés o necesitás retomarlo desde el inicio.',
     imageAlt: 'Alumnos principiantes en clase de inglés practicando vocabulario básico',
     imagePrompt:
       'Modern english classroom, beginner students writing vocabulary, warm lighting, premium education environment, Argentina, candid photography, natural expressions, shallow depth of field',
   },
   {
-    slug: 'intermedio',
-    tag: 'Conversación',
-    title: 'Intermedio',
+    slug: 'Básico',
+    tag: 'Herramientas básicas',
+    title: 'Básico',
     description:
-      'Foco en fluidez oral, comprensión auditiva y expresión escrita para el día a día y situaciones reales.',
-    imageAlt: 'Grupo de alumnos intermedios conversando en inglés en ronda',
+      'Vocabulario y Gramática base. Se comienza a trabajar en la fluidez oral, comprensión auditiva y expresión escrita para el día a día.',
+    imageAlt: 'Grupo de alumnos básicos conversando en inglés en ronda',
     imagePrompt:
       'Small group of teenagers having an english conversation class, sitting in a circle, teacher facilitating, warm natural light, candid photography, premium education environment, Argentina',
   },
   {
-    slug: 'avanzado',
-    tag: 'Cambridge / FCE',
-    title: 'Avanzado',
+    slug: 'Intermedio',
+    tag: 'Fortaleciendo el idioma',
+    title: 'Intermedio',
     description:
-      'Entrenamiento intensivo con material oficial, pensado para quienes ya manejan el idioma y buscan perfeccionarlo.',
-    imageAlt: 'Alumno avanzado resolviendo material de preparación Cambridge FCE',
+      'Se trabaja con material específico, Se comienza a manejar el idioma en todas sus habilidades.',
+    imageAlt: 'Alumno intermedio',
     imagePrompt:
       'Advanced english students reviewing Cambridge FCE exam material, focused expressions, modern classroom, natural lighting, candid photography, Argentina, shallow depth of field',
   },
@@ -46,7 +46,7 @@ export const cursos: Curso[] = [
     tag: 'Certificación',
     title: 'Preparación para exámenes',
     description:
-      'Cambridge, TOEFL e IELTS. Preparación dirigida con simulacros y seguimiento personalizado hasta el examen.',
+      'Cambridge, Oxford, TOEFL e IELTS. Preparación dirigida con simulacros y seguimiento personalizado hasta el examen.',
     imageAlt: 'Docente guiando a un alumno en un simulacro de examen internacional de inglés',
     imagePrompt:
       'Teacher helping a student prepare for an international english exam, one-on-one tutoring, papers and laptop on desk, warm premium lighting, candid photography, Argentina',
