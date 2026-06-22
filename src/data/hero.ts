@@ -62,5 +62,6 @@ export const heroSlides: Slide[] = [
     imageAlt: 'Alumno concentrado realizando el test de nivel de inglés en una notebook',
     imagePrompt:
       'Student taking an online english level test on a laptop, focused and relaxed expression, bright natural light, candid photography, premium education environment, Argentina',
+    imageSrc: '/images/hero/slide-3.jpg',
   },
 ];
