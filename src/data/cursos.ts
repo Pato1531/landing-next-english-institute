@@ -72,29 +72,29 @@ export const talleres: Curso[] = [
     tag: 'TCP',
     title: 'Inglés para Tripulantes de Cabina',
     description:
-      'Vocabulario técnico y de atención al pasajero orientado a quienes se forman como TCP o ya trabajan en la industria.',
+      'Inglés para aspirantes a Tripulantes de Cabina, Vocabulario básico del lenguaje y de atención al pasajero.',
     imageAlt: 'Estudiante de Tripulación de Cabina practicando inglés técnico aeronáutico',
     imagePrompt:
       'Flight attendant student practicing technical aviation english, uniform, classroom setting, professional warm lighting, candid photography, Argentina',
   },
   {
-    slug: 'negocios',
-    tag: 'Negocios',
-    title: 'Inglés de negocios',
+    slug: 'Entrevistas',
+    tag: 'Entrevistas',
+    title: 'Preparación para entrevistas en inglés y armados de CV',
     description:
-      'Comunicación profesional: mails, reuniones, presentaciones y negociación en entornos corporativos.',
-    imageAlt: 'Profesionales practicando una presentación de negocios en inglés',
+      'Persona en Preparación para entrevistas en inglés y armados de CV.',
+    imageAlt: 'Profesionales practicando una presentación de preparación en inglés',
     imagePrompt:
-      'Young professionals practicing a business english presentation, modern office-style classroom, natural light, candid photography, premium corporate environment, Argentina',
+      'Profesionales practicando una presentación de preparación en inglés',
   },
   {
-    slug: 'a-medida',
-    tag: 'A medida',
-    title: 'Talleres a pedido',
+    slug: 'Fonética',
+    tag: 'Fonética',
+    title: 'Taller de fonética',
     description:
-      '¿Tu equipo o grupo necesita algo específico? Armamos talleres temáticos a medida, consultanos.',
-    imageAlt: 'Docente diseñando un taller de inglés personalizado junto a un grupo pequeño',
+      'Taller orientado a corregir errores de pronunciación.',
+    imageAlt: 'Docente brindando Taller orientado a corregir errores de pronunciación junto a un grupo de estudio',
     imagePrompt:
-      'Teacher designing a custom english workshop with a small group, whiteboard with notes, warm collaborative atmosphere, candid photography, Argentina',
+      'Docente brindando Taller orientado a corregir errores de pronunciación junto a un grupo de estudio',
   },
 ];
