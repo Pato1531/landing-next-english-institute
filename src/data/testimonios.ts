@@ -46,4 +46,11 @@ export const testimonios: Testimonio[] = [
     date: 'dic 2023',
     text: 'Hermoso lugar, y súper atentos con los chicos.',
   },
+  {
+    initials: 'RC',
+    avatarClass: 'av-r',
+    name: 'Rosa Analia Chiuchiolo',
+    date: 'dic 2023',
+    text: 'Excelente lugar y estoy muy conforme con la educación y el trato a los niños.',
+  },
 ];
