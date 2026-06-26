@@ -15,7 +15,7 @@ export const faqItems: FaqItem[] = [
   {
     question: '¿Las clases son online, presenciales o ambas?',
     answer:
-      'Ofrecemos las dos modalidades. Podés cursar 100% presencial en nuestra sede de La Unión, Ezeiza, 100% online..',
+      'Ofrecemos las dos modalidades. Podés cursar 100% presencial en nuestra sede de La Unión, Ezeiza, 100% online.',
   },
   {
     question: '¿A partir de qué edad pueden anotarse?',
@@ -35,6 +35,6 @@ export const faqItems: FaqItem[] = [
   {
     question: '¿Qué formas de pago aceptan?',
     answer:
-      'Aceptamos tarjetas de débito y crédito, efectivo y pagos con QR y Mercado Pago. Consultá por planes de cuotas en recepción.',
+      'Aceptamos tarjetas de débito y crédito, efectivo y pagos con QR y Mercado Pago.',
   },
 ];
