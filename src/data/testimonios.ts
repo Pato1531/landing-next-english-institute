@@ -7,49 +7,43 @@ export type Testimonio = {
 };
 
 /**
- * Reviews reales de Google — se mantienen exactamente las presentes en el HTML original.
+ * Reviews reales de Google Maps — Next English Institute Ezeiza Sur / La Unión.
+ * Última actualización: junio 2026.
  */
 export const testimonios: Testimonio[] = [
   {
-    initials: 'JA',
-    avatarClass: 'av-b',
-    name: 'Javier Arenas',
-    date: 'hace 3 años',
-    text: 'Nivel intensivo que cumplió con mis expectativas. La profe Sofi Menta tiene toda la paciencia y profesionalismo.',
-  },
-  {
-    initials: 'AM',
-    avatarClass: 'av-g',
-    name: 'Adriana Mabel',
-    date: 'hace 3 años',
-    text: 'Un ambiente educativo agradable, trabajo grupal y compañerismo. Se aprende mucho y se pasa bien.',
-  },
-  {
-    initials: 'PC',
+    initials: 'JS',
     avatarClass: 'av-p',
-    name: 'Paloma Cánovas',
-    date: 'hace 3 años',
-    text: 'Súper recomendable, las profesoras son muy profesionales y enseñan con mucha paciencia y dedicación.',
+    name: 'Juli Sanchez',
+    date: 'dic 2024',
+    text: 'Lindo espacio para aprender inglés, buenos profes y grandes grupos de personas aprendiendo. La administración y los profes se encuentran atentos siempre a los estudiantes, brindándoles la mejor atención y disposición siempre.',
   },
   {
-    initials: 'ML',
-    avatarClass: 'av-r',
-    name: 'Marcos L.',
-    date: 'hace 1 año',
-    text: 'Empecé sin saber nada y en un año ya puedo mantener conversaciones. Grupos reducidos y método muy efectivo.',
-  },
-  {
-    initials: 'LG',
-    avatarClass: 'av-b',
-    name: 'Laura G.',
-    date: 'hace 8 meses',
-    text: 'Hice inglés para viajar y fue increíble. En dos meses tenía el vocabulario y confianza para hablar en el exterior.',
-  },
-  {
-    initials: 'RP',
+    initials: 'FG',
     avatarClass: 'av-g',
-    name: 'Roberto P.',
-    date: 'hace 5 meses',
-    text: 'Excelente instituto, muy buen clima de trabajo y profes comprometidos. Ya anoté a mi hija también.',
+    name: 'Fernanda Gómez',
+    date: 'dic 2024',
+    text: 'Excelente instituto, mi hija estudia ahí y la verdad excelente atención, sin ninguna queja, muy buenos profesores. Mi hija aprendió muchísimo.',
+  },
+  {
+    initials: 'SY',
+    avatarClass: 'av-b',
+    name: 'Sandra Yoeslebert',
+    date: 'dic 2024',
+    text: 'Recomiendo el instituto, mi nena fue este año y seguirá el próximo. Muy lindo lugar y excelente atención con los alumnos y padres. ¡Gracias!',
+  },
+  {
+    initials: 'AZ',
+    avatarClass: 'av-r',
+    name: 'Alvaro J. Zamo',
+    date: 'hace 4 días',
+    text: 'Buena gente. Buenos profesores.',
+  },
+  {
+    initials: 'CS',
+    avatarClass: 'av-g',
+    name: 'Cecilia Gabriela Silva',
+    date: 'dic 2023',
+    text: 'Hermoso lugar, y súper atentos con los chicos.',
   },
 ];
