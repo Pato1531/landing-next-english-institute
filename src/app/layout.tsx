@@ -61,8 +61,13 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true },
   },
   icons: {
-    icon: '/icon-192.png',
-    apple: '/icon-192.png',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon-32x32.png', type: 'image/png', sizes: '32x32' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
   },
 };
 
@@ -79,7 +84,7 @@ const jsonLd = {
   alternateName: 'Next English',
   description,
   url: SITE_URL,
-  logo: `${SITE_URL}/icon-512.png`,
+  logo: `${SITE_URL}/favicon-32x32.png`,
   image: `${SITE_URL}/og-image.jpg`,
   telephone: '+541155805810',
   priceRange: '$$',
