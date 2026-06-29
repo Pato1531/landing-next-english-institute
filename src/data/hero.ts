@@ -60,4 +60,14 @@ export const heroSlides: Slide[] = [
     imagePrompt:
       'Student taking an online english level test on a laptop, focused and relaxed expression, bright natural light, candid photography, premium education environment, Argentina',
   },
+  {
+    badge: '🌐 Next E-Learning',
+    heading: 'Aprendé inglés para viajar desde donde estés',
+    sub: 'Video, subtítulos, PDF descargable y certificado. A tu ritmo, cuando quieras.',
+    ctaLabel: 'Ver curso →',
+    ctaHref: '/online',
+    imageAlt: 'Persona tomando un curso de inglés online desde su computadora',
+    imagePrompt:
+      'Person studying english online on a laptop, travel accessories nearby, passport and map on desk, bright natural light, candid photography, premium education environment',
+  },
 ];
