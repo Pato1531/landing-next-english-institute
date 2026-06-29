@@ -8,6 +8,7 @@ import Faq from '@/components/Faq';
 import Contacto from '@/components/Contacto';
 import Footer from '@/components/Footer';
 import WhatsAppFloat from '@/components/WhatsAppFloat';
+import NextELearning from '@/components/NextELearning';
 
 const exploreLinks = [
   {
@@ -86,6 +87,7 @@ export default function HomePage() {
         </section>
 
         <Cursos />
+        <NextELearning />
         <Nosotros />
         <Testimonios />
         <Faq />
