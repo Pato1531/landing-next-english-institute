@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { heroSlides } from '@/data/hero';
 import ImagePlaceholder from './ImagePlaceholder';
 
-const AUTOPLAY_MS = 4500;
+const AUTOPLAY_MS = 6000;
 
 export default function HeroSlider() {
   const [index, setIndex] = useState(0);
