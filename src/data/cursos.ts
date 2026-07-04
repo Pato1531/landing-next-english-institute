@@ -69,9 +69,10 @@ export const talleres: Curso[] = [
     title: 'Inglés para viajar',
     description:
       'Vocabulario y frases clave para aeropuertos, hoteles, restaurantes y situaciones cotidianas en el exterior.',
-    imageAlt: 'Persona practicando frases de inglés para viajar con una maleta',
+    imageAlt: 'Persona practicando frases de inglés para viajar con valija, pasaporte y mapa',
     imagePrompt:
       'Young adult practicing travel english phrases, suitcase and passport on table, warm natural light, candid photography, premium lifestyle, Argentina',
+    image: '/images/talleres/viajes.jpg',
   },
   {
     slug: 'tcp',
