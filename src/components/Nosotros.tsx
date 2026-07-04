@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import ImagePlaceholder from './ImagePlaceholder';
 
 const features = [
@@ -20,16 +21,11 @@ const features = [
 ];
 
 /**
- * IMAGEN — Nosotros (imagen principal)
- * Foto real. Escenario: fachada o recepción de la sede en Av. El Trébol 31, La Unión, Ezeiza.
- * Sujetos: ninguno o personal de recepción saludando.
- * Estilo: natural, cálido, premium, espontáneo, evitar fotos stock.
- * Orientación: 16:9 — Tamaño: 1600x900.
- *
- * IMAGEN — Galería 1: sede / aula vacía mostrando el espacio.
- * IMAGEN — Galería 2: alumnos en clase, dinámica grupal real.
- * IMAGEN — Galería 3: equipo docente, retrato grupal cálido.
- * Estilo para las tres: natural, iluminación cálida, premium, candid. Tamaño: 800x600 cada una.
+ * IMAGEN — Nosotros (imagen principal): resuelta con foto real (/images/nosotros/main.jpg).
+ * IMAGEN — Galería 1 (sede/aula vacía): resuelta (/images/nosotros/gallery-1.jpg).
+ * IMAGEN — Galería 2 (alumnos en clase): resuelta (/images/nosotros/gallery-2.jpg).
+ * IMAGEN — Galería 3 (equipo docente, retrato grupal cálido): PENDIENTE — falta la foto en el
+ * lote entregado. Estilo cuando llegue: natural, iluminación cálida, premium, candid. 800x800.
  */
 export default function Nosotros() {
   return (
@@ -39,11 +35,13 @@ export default function Nosotros() {
         NEXT English Institute
       </h2>
 
-      <div className="mb-8 overflow-hidden rounded-2xl">
-        <ImagePlaceholder
-          alt="Fachada de la sede de Next English Institute en Av. El Trébol 31, La Unión, Ezeiza"
-          aspect="video"
-          className="h-[220px] sm:h-[340px]"
+      <div className="relative mb-8 h-[220px] overflow-hidden rounded-2xl sm:h-[340px]">
+        <Image
+          src="/images/nosotros/main.jpg"
+          alt="Recepción de la sede de Next English Institute en Av. El Trébol 31, La Unión, Ezeiza"
+          fill
+          sizes="(min-width: 1024px) 896px, 100vw"
+          className="object-cover"
         />
       </div>
 
@@ -56,9 +54,29 @@ export default function Nosotros() {
       </p>
 
       <div className="mb-8 grid grid-cols-2 gap-3 sm:grid-cols-3">
-        <ImagePlaceholder alt="Sede y aulas de Next English Institute" aspect="square" className="rounded-xl h-[140px]" />
-        <ImagePlaceholder alt="Alumnos participando de una clase de inglés" aspect="square" className="rounded-xl h-[140px]" />
-        <ImagePlaceholder alt="Equipo docente de Next English Institute" aspect="square" className="rounded-xl h-[140px] col-span-2 sm:col-span-1" />
+        <div className="relative h-[140px] overflow-hidden rounded-xl">
+          <Image
+            src="/images/nosotros/gallery-1.jpg"
+            alt="Sede y aulas de Next English Institute"
+            fill
+            sizes="(min-width: 640px) 33vw, 50vw"
+            className="object-cover"
+          />
+        </div>
+        <div className="relative h-[140px] overflow-hidden rounded-xl">
+          <Image
+            src="/images/nosotros/gallery-2.jpg"
+            alt="Alumnos participando de una clase de inglés"
+            fill
+            sizes="(min-width: 640px) 33vw, 50vw"
+            className="object-cover"
+          />
+        </div>
+        <ImagePlaceholder
+          alt="Equipo docente de Next English Institute"
+          aspect="square"
+          className="rounded-xl h-[140px] col-span-2 sm:col-span-1"
+        />
       </div>
 
       <div className="grid gap-5 sm:grid-cols-2">
