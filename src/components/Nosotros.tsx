@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import ImagePlaceholder from './ImagePlaceholder';
 
 const features = [
   {
@@ -22,10 +21,12 @@ const features = [
 
 /**
  * IMAGEN — Nosotros (imagen principal): resuelta con foto real (/images/nosotros/main.jpg).
- * IMAGEN — Galería 1 (sede/aula vacía): resuelta (/images/nosotros/gallery-1.jpg).
- * IMAGEN — Galería 2 (alumnos en clase): resuelta (/images/nosotros/gallery-2.jpg).
- * IMAGEN — Galería 3 (equipo docente, retrato grupal cálido): PENDIENTE — falta la foto en el
- * lote entregado. Estilo cuando llegue: natural, iluminación cálida, premium, candid. 800x800.
+ * IMAGEN — Galería (sede/aula vacía y alumnos en clase): resueltas en formato 4:3
+ * (/images/nosotros/gallery-1.jpg, gallery-2.jpg). Formato 4:3 en vez de cuadrado: las fotos
+ * originales son verticales (celular) y un recorte 1:1 quedaba demasiado agresivo.
+ * Por decisión de Patricio (04/07) se sacó la tercera card de "equipo docente" en vez de
+ * dejarla en placeholder — si en el futuro llega esa foto, se puede reincorporar como
+ * tercer elemento del grid.
  */
 export default function Nosotros() {
   return (
@@ -53,30 +54,25 @@ export default function Nosotros() {
         globalizado.
       </p>
 
-      <div className="mb-8 grid grid-cols-2 gap-3 sm:grid-cols-3">
-        <div className="relative h-[140px] overflow-hidden rounded-xl">
+      <div className="mb-8 grid grid-cols-2 gap-4 sm:mx-auto sm:max-w-xl">
+        <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
           <Image
             src="/images/nosotros/gallery-1.jpg"
             alt="Sede y aulas de Next English Institute"
             fill
-            sizes="(min-width: 640px) 33vw, 50vw"
+            sizes="(min-width: 640px) 300px, 50vw"
             className="object-cover"
           />
         </div>
-        <div className="relative h-[140px] overflow-hidden rounded-xl">
+        <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
           <Image
             src="/images/nosotros/gallery-2.jpg"
             alt="Alumnos participando de una clase de inglés"
             fill
-            sizes="(min-width: 640px) 33vw, 50vw"
+            sizes="(min-width: 640px) 300px, 50vw"
             className="object-cover"
           />
         </div>
-        <ImagePlaceholder
-          alt="Equipo docente de Next English Institute"
-          aspect="square"
-          className="rounded-xl h-[140px] col-span-2 sm:col-span-1"
-        />
       </div>
 
       <div className="grid gap-5 sm:grid-cols-2">
