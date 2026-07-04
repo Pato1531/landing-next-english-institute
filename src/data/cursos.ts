@@ -44,7 +44,7 @@ export const cursos: Curso[] = [
     imageAlt: 'Docente corrigiendo un ejercicio de gramática en el pizarrón junto a una colega',
     imagePrompt:
       'Teacher correcting a grammar exercise on the whiteboard, colleague observing, modern classroom, natural lighting, candid photography, Argentina, shallow depth of field',
-    image: '/images/cursos/intermedio.jpg',
+    image: '/images/cursos/intermedio-v2.jpg',
   },
   {
     slug: 'certificacion',
@@ -55,7 +55,7 @@ export const cursos: Curso[] = [
     imageAlt: 'Docentes explicando la estructura del examen Cambridge a un alumno',
     imagePrompt:
       'Teachers explaining Cambridge exam structure to a student, exam model outline on whiteboard, Cambridge Assessment English branding visible, classroom, candid photography, Argentina',
-    image: '/images/cursos/certificacion.jpg',
+    image: '/images/cursos/certificacion-v2.jpg',
   },
 ];
 
