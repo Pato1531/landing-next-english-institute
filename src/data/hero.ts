@@ -33,11 +33,9 @@ export type Slide = {
  * Estilo: natural, iluminación cálida, premium, espontánea.
  * Orientación: 16:9 — Tamaño: 1920x1080.
  *
- * IMAGEN — Hero Slide 3
- * Foto real. Escenario: alumno haciendo el test de nivel en una notebook/tablet.
- * Sujetos: alumno solo, concentrado, ambiente luminoso.
- * Estilo: natural, iluminación cálida, premium, espontánea.
- * Orientación: 16:9 — Tamaño: 1920x1080.
+ * IMAGEN — Hero Slide 3: resuelta (/images/hero/hero-3.jpg).
+ * Nota: imagen generada con IA (no es foto real del instituto), usando una foto real de la
+ * sede como referencia de ambiente/estilo. Igual criterio que talleres sin foto disponible.
  */
 export const heroSlides: Slide[] = [
   {
@@ -73,6 +71,8 @@ export const heroSlides: Slide[] = [
     imageAlt: 'Alumno concentrado realizando el test de nivel de inglés en una notebook',
     imagePrompt:
       'Student taking an online english level test on a laptop, focused and relaxed expression, bright natural light, candid photography, premium education environment, Argentina',
+    image: '/images/hero/hero-3.jpg',
+    focalY: 40,
   },
   {
     badge: '🌐 Next E-Learning',
