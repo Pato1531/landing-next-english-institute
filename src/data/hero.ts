@@ -8,6 +8,14 @@ export type Slide = {
   imagePrompt: string;
   /** Ruta de la foto real en /public. Si no está definida, se muestra el placeholder. */
   image?: string;
+  /**
+   * Punto de anclaje vertical de la foto dentro del banner (0% = tope, 100% = base).
+   * El banner del hero es mucho más ancho/bajo que un 16:9 estándar, así que en
+   * pantallas anchas `object-cover` recorta más arriba y abajo de lo que recortamos
+   * al procesar la foto. Este valor evita volver a recortar el archivo: solo mueve
+   * la "ventana" visible para mantener a las personas en cuadro. Default: 50%.
+   */
+  focalY?: number;
 };
 
 /**
@@ -42,6 +50,7 @@ export const heroSlides: Slide[] = [
     imagePrompt:
       'Modern english classroom, teacher helping students, teenagers learning english, warm lighting, premium education environment, Argentina, candid photography, natural expressions, shallow depth of field',
     image: '/images/hero/hero-1.jpg',
+    focalY: 68,
   },
   {
     badge: '🎯 Propuesta especializada',
@@ -53,6 +62,7 @@ export const heroSlides: Slide[] = [
     imagePrompt:
       'Diverse group of young adults in a themed english workshop, business and travel vocabulary on whiteboard, warm natural light, candid photography, premium education environment, Argentina',
     image: '/images/hero/hero-2.jpg',
+    focalY: 65,
   },
   {
     badge: '✅ Gratis · Sin compromiso',
