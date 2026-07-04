@@ -41,9 +41,9 @@ export const cursos: Curso[] = [
     title: 'Intermedio',
     description:
       'Se trabaja con material específico, Se comienza a manejar el idioma en todas sus habilidades.',
-    imageAlt: 'Alumno intermedio',
+    imageAlt: 'Docente corrigiendo un ejercicio de gramática en el pizarrón junto a una colega',
     imagePrompt:
-      'Advanced english students reviewing Cambridge FCE exam material, focused expressions, modern classroom, natural lighting, candid photography, Argentina, shallow depth of field',
+      'Teacher correcting a grammar exercise on the whiteboard, colleague observing, modern classroom, natural lighting, candid photography, Argentina, shallow depth of field',
     image: '/images/cursos/intermedio.jpg',
   },
   {
@@ -52,9 +52,9 @@ export const cursos: Curso[] = [
     title: 'Preparación para exámenes',
     description:
       'Cambridge, Oxford, TOEFL e IELTS. Preparación dirigida con simulacros y seguimiento personalizado hasta el examen.',
-    imageAlt: 'Docente guiando a un alumno en un simulacro de examen internacional de inglés',
+    imageAlt: 'Docentes explicando la estructura del examen Cambridge a un alumno',
     imagePrompt:
-      'Teacher helping a student prepare for an international english exam, one-on-one tutoring, papers and laptop on desk, warm premium lighting, candid photography, Argentina',
+      'Teachers explaining Cambridge exam structure to a student, exam model outline on whiteboard, Cambridge Assessment English branding visible, classroom, candid photography, Argentina',
     image: '/images/cursos/certificacion.jpg',
   },
 ];
