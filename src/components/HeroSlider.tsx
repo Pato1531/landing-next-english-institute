@@ -79,6 +79,7 @@ export default function HeroSlider() {
                   loading={i === 0 ? undefined : 'lazy'}
                   sizes="100vw"
                   className="object-cover"
+                  style={{ objectPosition: `center ${slide.focalY ?? 50}%` }}
                 />
               ) : (
                 <ImagePlaceholder alt={slide.imageAlt} aspect="video" className="h-full w-full" />
