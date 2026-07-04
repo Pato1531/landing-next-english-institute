@@ -5,6 +5,8 @@ export type Curso = {
   description: string;
   imageAlt: string;
   imagePrompt: string;
+  /** Ruta de la foto real en /public. Si no está definida, se muestra el placeholder. */
+  image?: string;
 };
 
 /**
@@ -20,6 +22,7 @@ export const cursos: Curso[] = [
     imageAlt: 'Alumnos principiantes en clase de inglés practicando vocabulario básico',
     imagePrompt:
       'Modern english classroom, beginner students writing vocabulary, warm lighting, premium education environment, Argentina, candid photography, natural expressions, shallow depth of field',
+    image: '/images/cursos/nivel-inicial.jpg',
   },
   {
     slug: 'Básico',
@@ -30,6 +33,7 @@ export const cursos: Curso[] = [
     imageAlt: 'Grupo de alumnos básicos conversando en inglés en ronda',
     imagePrompt:
       'Small group of teenagers having an english conversation class, sitting in a circle, teacher facilitating, warm natural light, candid photography, premium education environment, Argentina',
+    image: '/images/cursos/basico.jpg',
   },
   {
     slug: 'Intermedio',
@@ -40,6 +44,7 @@ export const cursos: Curso[] = [
     imageAlt: 'Alumno intermedio',
     imagePrompt:
       'Advanced english students reviewing Cambridge FCE exam material, focused expressions, modern classroom, natural lighting, candid photography, Argentina, shallow depth of field',
+    image: '/images/cursos/intermedio.jpg',
   },
   {
     slug: 'certificacion',
@@ -50,6 +55,7 @@ export const cursos: Curso[] = [
     imageAlt: 'Docente guiando a un alumno en un simulacro de examen internacional de inglés',
     imagePrompt:
       'Teacher helping a student prepare for an international english exam, one-on-one tutoring, papers and laptop on desk, warm premium lighting, candid photography, Argentina',
+    image: '/images/cursos/certificacion.jpg',
   },
 ];
 
