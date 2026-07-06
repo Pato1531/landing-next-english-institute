@@ -10,7 +10,7 @@ export default function Footer() {
           <p className="text-lg font-bold text-violet">Next English</p>
           <p className="text-sm text-ink-secondary">{SITE.sede}</p>
         </div>
-        <div className="flex flex-col items-end gap-2 text-right text-sm font-semibold text-violet-darker">
+        <div className="flex flex-col items-start gap-2 text-left text-sm font-semibold text-violet-darker sm:items-end sm:text-right">
           <a
             href={SITE.instagramUrl}
             target="_blank"
