@@ -80,9 +80,10 @@ export const talleres: Curso[] = [
     title: 'Inglés para Tripulantes de Cabina',
     description:
       'Inglés para aspirantes a Tripulantes de Cabina, Vocabulario básico del lenguaje y de atención al pasajero.',
-    imageAlt: 'Estudiante de Tripulación de Cabina practicando inglés técnico aeronáutico',
+    imageAlt: 'Estudiante de Tripulación de Cabina practicando inglés técnico aeronáutico en el aula',
     imagePrompt:
       'Flight attendant student practicing technical aviation english, uniform, classroom setting, professional warm lighting, candid photography, Argentina',
+    image: '/images/talleres/tcp.jpg',
   },
   {
     slug: 'Entrevistas',
