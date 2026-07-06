@@ -50,7 +50,7 @@ function StatCard({ stat, active }: { stat: Stat; active: boolean }) {
   const display = stat.type === 'counter' ? `+${count}${stat.suffix}` : stat.display;
 
   return (
-    <div className="rounded-2xl border border-violet-border bg-violet-light px-4 py-7 text-center">
+    <div className="flex flex-col items-center justify-center rounded-2xl border border-violet-border bg-violet-light px-4 py-7 text-center">
       <p className="text-3xl font-bold text-violet" aria-hidden="true">
         {display}
       </p>
@@ -85,12 +85,12 @@ export default function Stats() {
       ref={ref}
       role="group"
       aria-label="+1000 alumnos formados, +3 años de experiencia, validez internacional"
-      className="mx-auto grid max-w-wrap grid-cols-3 gap-4 border-b border-violet-border px-6 py-10 sm:gap-5"
+      className="mx-auto flex max-w-wrap gap-4 border-b border-violet-border px-6 py-10 sm:gap-5"
     >
       {stats.map((stat, i) => (
         <div
           key={stat.label}
-          className={active ? 'animate-fade-up' : 'opacity-0'}
+          className={`min-w-0 flex-1 ${active ? 'animate-fade-up' : 'opacity-0'}`}
           style={{ animationDelay: `${i * 120}ms` }}
         >
           <StatCard stat={stat} active={active} />
