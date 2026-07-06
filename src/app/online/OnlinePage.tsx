@@ -46,7 +46,7 @@ const includes = [
       </svg>
     ),
     label: 'Video con explicaciones',
-    desc: '12 lecciones en video, claras y directas',
+    desc: 'Explicaciones claras y directas, organizadas en 3 módulos',
   },
   {
     icon: (
@@ -87,7 +87,7 @@ const includes = [
       </svg>
     ),
     label: 'Certificado al finalizar',
-    desc: 'Emitido y verificado digitalmente por NEI',
+    desc: 'Emitido y verificado digitalmente',
   },
   {
     icon: (
@@ -95,7 +95,7 @@ const includes = [
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
       </svg>
     ),
-    label: 'Acceso de por vida',
+    label: 'Acceso por 6 meses',
     desc: 'Volvé a verlo cuando lo necesites',
   },
 ];
@@ -107,7 +107,7 @@ const faqs = [
   },
   {
     q: '¿Cuánto tiempo lleva completarlo?',
-    a: 'Aproximadamente 1 hora en total, dividida en 3 módulos de 4 lecciones cada uno. Podés hacerlo a tu ritmo.',
+    a: 'El curso está diseñado para que lo realices a tus tiempos, está dividido en 3 módulos.',
   },
   {
     q: '¿Desde qué dispositivos puedo verlo?',
@@ -115,11 +115,11 @@ const faqs = [
   },
   {
     q: '¿Por cuánto tiempo tengo acceso?',
-    a: 'El acceso es de por vida. Pagás una vez y podés volver a verlo cuando quieras.',
+    a: 'El acceso es por 6 meses. Pagás una vez y podés volver a verlo las veces que quieras.',
   },
   {
     q: '¿El certificado tiene validez?',
-    a: 'Es un certificado emitido por NEXT English Institute, con verificación digital. No reemplaza certificaciones internacionales como Cambridge, pero acredita la finalización del curso.',
+    a: 'Es un certificado emitido por NEXT English Institute, que acredita la finalización del curso.',
   },
   {
     q: '¿Cómo accedo después de pagar?',
@@ -198,7 +198,7 @@ export default function OnlinePage() {
 
             {/* Pills de resumen */}
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3" aria-label="Características del curso">
-              {['~1 hora', '3 módulos', '12 lecciones', 'Subtítulos', 'Certificado', 'Acceso de por vida'].map((p) => (
+              {['3 módulos', 'Subtítulos', 'Certificado', 'Acceso por 6 meses'].map((p) => (
                 <span key={p} className="rounded-full bg-white/8 px-3 py-1.5 text-xs text-violet-border ring-1 ring-white/10">
                   {p}
                 </span>
@@ -290,7 +290,7 @@ export default function OnlinePage() {
               Tu próximo viaje, con más confianza
             </h2>
             <p className="mb-6 text-sm leading-relaxed text-violet-border">
-              Un pago único. Acceso de por vida. Empezás hoy.
+              Un pago único. Acceso por 6 meses. Empezás hoy.
             </p>
             <div className="mb-4 flex items-center justify-center gap-4">
               <span className="text-lg text-violet-border/50 line-through" aria-label="Precio original">$48.000</span>
