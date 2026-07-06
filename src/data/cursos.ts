@@ -90,10 +90,11 @@ export const talleres: Curso[] = [
     tag: 'Entrevistas',
     title: 'Preparación para entrevistas en inglés y armados de CV',
     description:
-      'Persona en Preparación para entrevistas en inglés y armados de CV.',
-    imageAlt: 'Profesionales practicando una presentación de preparación en inglés',
+      'Practicá cómo presentarte, contar tu experiencia y responder preguntas frecuentes en una entrevista laboral en inglés.',
+    imageAlt: 'Grupo de alumnos adultos en un taller de preparación para entrevistas laborales',
     imagePrompt:
-      'Profesionales practicando una presentación de preparación en inglés',
+      'Diverse group of adult students in a job interview preparation workshop, classroom setting, candid photography, Argentina',
+    image: '/images/talleres/entrevistas.jpg',
   },
   {
     slug: 'Fonética',
@@ -101,8 +102,9 @@ export const talleres: Curso[] = [
     title: 'Taller de fonética',
     description:
       'Taller orientado a corregir errores de pronunciación.',
-    imageAlt: 'Docente brindando Taller orientado a corregir errores de pronunciación junto a un grupo de estudio',
+    imageAlt: 'Grupo de alumnos tomando notas durante una clase grupal en el instituto',
     imagePrompt:
-      'Docente brindando Taller orientado a corregir errores de pronunciación junto a un grupo de estudio',
+      'Teacher leading a pronunciation workshop, group of attentive students taking notes, classroom setting, candid photography, Argentina',
+    image: '/images/talleres/fonetica.jpg',
   },
 ];
