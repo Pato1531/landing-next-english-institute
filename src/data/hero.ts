@@ -21,21 +21,13 @@ export type Slide = {
 /**
  * Hero slider — se mantiene el mismo mensaje y orden del HTML original.
  *
- * IMAGEN — Hero Slide 1
- * Foto real. Escenario: aula moderna del instituto en Ezeiza.
- * Sujetos: docente interactuando con alumnos en clase presencial.
- * Estilo: natural, iluminación cálida, premium, espontánea, evitar fotos stock.
- * Orientación: 16:9 — Tamaño: 1920x1080.
- *
- * IMAGEN — Hero Slide 2
- * Foto real. Escenario: taller temático (inglés de negocios / viajes / TCP).
- * Sujetos: alumnos jóvenes y adultos en dinámica grupal.
- * Estilo: natural, iluminación cálida, premium, espontánea.
- * Orientación: 16:9 — Tamaño: 1920x1080.
- *
+ * IMAGEN — Hero Slide 1: resuelta con foto real (/images/hero/hero-1.jpg).
+ * IMAGEN — Hero Slide 2: resuelta con foto real (/images/hero/hero-2.jpg).
  * IMAGEN — Hero Slide 3: resuelta (/images/hero/hero-3.jpg).
  * Nota: imagen generada con IA (no es foto real del instituto), usando una foto real de la
  * sede como referencia de ambiente/estilo. Igual criterio que talleres sin foto disponible.
+ * IMAGEN — Hero Slide 4: resuelta (/images/hero/hero-4.jpg). También generada con IA con el
+ * mismo criterio que el Slide 3 (referencia visual real, sin pretender ser foto documental).
  */
 export const heroSlides: Slide[] = [
   {
@@ -83,5 +75,7 @@ export const heroSlides: Slide[] = [
     imageAlt: 'Persona tomando un curso de inglés online desde su computadora',
     imagePrompt:
       'Person studying english online on a laptop, travel accessories nearby, passport and map on desk, bright natural light, candid photography, premium education environment',
+    image: '/images/hero/hero-4.jpg',
+    focalY: 35,
   },
 ];
