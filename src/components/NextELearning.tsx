@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 export default function NextELearning() {
   return (
     <section
@@ -53,18 +55,15 @@ export default function NextELearning() {
               className="overflow-hidden rounded-2xl bg-white/8 ring-1 ring-white/12"
               aria-label="Curso English for Tourism"
             >
-              {/* Imagen placeholder del curso */}
-              <div
-                className="flex h-44 items-center justify-center bg-gradient-to-br from-violet-dark via-violet-darker to-[#1a3a6b]"
-                aria-hidden="true"
-              >
-                <div className="flex flex-col items-center gap-2 opacity-70">
-                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-white">
-                    <path d="M5 17.5L12 3l7 14.5M9 12h6" />
-                    <path d="M3 21h18" />
-                  </svg>
-                  <span className="text-xs uppercase tracking-widest text-white/60">E-Learning</span>
-                </div>
+              {/* Imagen del curso — generada con IA (misma sede como referencia de estilo) */}
+              <div className="relative aspect-video">
+                <Image
+                  src="/images/elearning/english-for-tourism.jpg"
+                  alt="Clase online de inglés para turismo, con vocabulario para el check-in del aeropuerto en pantalla"
+                  fill
+                  sizes="(min-width: 1024px) 460px, 100vw"
+                  className="object-cover"
+                />
               </div>
 
               <div className="p-5">
