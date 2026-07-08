@@ -5,6 +5,11 @@ export const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '54911
 
 export const INSTAGRAM_HANDLE = process.env.NEXT_PUBLIC_INSTAGRAM_HANDLE ?? 'nextezeiza.sur';
 
+/** Formatea un monto en pesos argentinos sin decimales, ej: 29000 -> "$29.000" */
+export function formatARS(amount: number): string {
+  return `$${amount.toLocaleString('es-AR')}`;
+}
+
 export const SITE = {
   name: 'NEXT English Institute',
   shortName: 'Next English',
