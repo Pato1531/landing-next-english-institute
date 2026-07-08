@@ -232,10 +232,8 @@ export const elearningCourses: ElearningCourse[] = [
       'Preparate para tu próxima entrevista de trabajo en inglés en menos de una semana: de la presentación personal al cierre y seguimiento post-entrevista, con tus propias respuestas ya armadas.',
 
     image: {
-      // TODO(Patricio): falta la foto/imagen del curso. Generar con el mismo pipeline
-      // (AI + fotos reales del instituto como referencia de estilo) y recortar a 800×450.
-      // Guardar en /public/images/elearning/job-ready-english.jpg
-      alt: 'Persona practicando una entrevista de trabajo en inglés frente a la computadora',
+      src: '/images/elearning/job-ready-english.jpg',
+      alt: 'Simulación de entrevista laboral en inglés entre estudiante y profesor en el aula de Next English Institute',
     },
 
     cardPills: ['8 lecciones', '2 módulos', 'Nivel A2-B1'],
