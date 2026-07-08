@@ -36,7 +36,7 @@ const exploreLinks = [
     desc: 'Resolvé tus dudas sobre modalidades, edades, pagos y certificaciones.',
   },
   {
-    href: '/online',
+    href: '#elearning',
     tag: 'Next E-Learning',
     title: 'Cursos online',
     desc: 'Aprendé inglés desde donde estés. Video, subtítulos, PDF y certificado.',
