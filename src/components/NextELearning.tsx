@@ -49,7 +49,7 @@ export default function NextELearning() {
         </div>
 
         {/* Cursos — tarjetas compactas lado a lado */}
-        <div className="grid gap-5 sm:grid-cols-2" role="list" aria-label="Cursos online disponibles">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3" role="list" aria-label="Cursos online disponibles">
           {elearningCourses.map((course) => (
             <article
               key={course.slug}
