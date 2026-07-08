@@ -245,10 +245,7 @@ export const elearningCourses: ElearningCourse[] = [
     language: 'Inglés británico',
 
     price: { current: 29000, original: 48000, currency: 'ARS' },
-    // TODO(Patricio): reemplazar por el link de Mercado Pago propio de este curso.
-    // Usar el mismo link que English for Tourism mezclaría las ventas de ambos
-    // productos en un solo reporte y no vas a poder distinguir qué se vendió.
-    mpLink: 'https://mpago.li/1QN6N6w',
+    mpLink: 'https://mpago.la/2EtErSm',
     whatsappMessage: 'Hola, tengo una consulta sobre el curso Job Ready English',
 
     audienceHeading: 'Este curso es para vos si…',
