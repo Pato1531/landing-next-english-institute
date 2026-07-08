@@ -33,7 +33,7 @@ export const cursos: Curso[] = [
     imageAlt: 'Grupo de alumnos básicos conversando en inglés en ronda, guiados por la docente',
     imagePrompt:
       'Small group of teenagers having an english conversation class, sitting in a circle, teacher facilitating, warm natural light, candid photography, premium education environment, Argentina',
-    image: '/images/cursos/basico-v2.jpg',
+    image: '/images/cursos/basico-v3.jpg',
   },
   {
     slug: 'Intermedio',
