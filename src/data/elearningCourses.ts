@@ -79,6 +79,150 @@ export type ElearningCourse = {
 
 export const elearningCourses: ElearningCourse[] = [
   {
+    slug: 'english-from-zero',
+    name: 'English from Zero',
+    tagline: 'Desde cero hasta poder presentarte, contar tu día y describir tu mundo en inglés',
+
+    cardDescription:
+      'El curso base de Next English Institute: gramática y vocabulario esencial en 12 lecciones bilingües, paso a paso, con Anna y Tom.',
+
+    heroTitle: 'Desde cero hasta<br />hablar de vos en inglés',
+    heroDescription:
+      'El punto de partida ideal si nunca estudiaste inglés o querés reforzar las bases: gramática fundamental y vocabulario esencial en 12 lecciones bilingües, cada una construida sobre la anterior, para que nunca sientas que perdiste el hilo.',
+
+    image: {
+      alt: 'Curso online English from Zero, inglés desde cero con lecciones bilingües guiadas por Anna y Tom',
+    },
+
+    cardPills: ['12 lecciones', '3 módulos', 'Nivel A1'],
+    summaryPills: ['3 módulos', '12 lecciones', 'Inglés británico', 'Acceso por 6 meses'],
+
+    level: 'Principiante absoluto (A1)',
+    language: 'Inglés británico',
+
+    price: { current: 29000, original: 48000, currency: 'ARS' },
+    mpLink: 'https://mpago.la/2LKDYgc',
+    whatsappMessage: 'Hola, tengo una consulta sobre el curso English from Zero',
+
+    audienceHeading: 'Este curso es para vos si…',
+    audience: [
+      'Nunca estudiaste inglés y no sabés por dónde empezar',
+      'Estudiaste hace mucho y sentís que tenés que arrancar de cero otra vez',
+      'Te da vergüenza empezar un curso "para principiantes" y no entender igual',
+      'Preferís avanzar despacio y seguro, sin saltarte las bases',
+      'Pensás anotarte después en un curso más específico (viajes, entrevistas) pero primero querés la gramática de base',
+      'Te sirve seguir una historia con personajes en vez de frases sueltas sin contexto',
+    ],
+
+    modules: [
+      {
+        number: '01',
+        title: 'Los Cimientos',
+        lessons: [
+          'Alphabet, Numbers & Basic Greetings',
+          'The Verb "To Be"',
+          'Personal Pronouns & Possessives',
+          'Articles & Basic Nouns',
+        ],
+      },
+      {
+        number: '02',
+        title: 'Hablar del Presente',
+        lessons: [
+          'Present Simple — Rutinas y hábitos',
+          'Common Verbs (have, like, want, need, go)',
+          'Questions & Question Words',
+          'Negatives & Short Answers',
+        ],
+      },
+      {
+        number: '03',
+        title: 'El Mundo Alrededor',
+        lessons: [
+          'Family & People',
+          'Time, Days & Numbers en contexto',
+          'Colours, Adjectives & Descriptions',
+          'Everyday Objects & "There is / There are"',
+        ],
+      },
+    ],
+
+    includes: [
+      {
+        icon: 'video',
+        label: 'Video con guion bilingüe',
+        desc: 'Explicaciones en español, práctica y diálogos en inglés con Anna y Tom',
+      },
+      {
+        icon: 'subtitles',
+        label: 'Voz nativa británica',
+        desc: 'Con subtítulos, para entrenar el oído desde la primera lección',
+      },
+      {
+        icon: 'pdf',
+        label: 'Material descargable en PDF',
+        desc: 'Vocabulario, frases clave y diálogo modelo de cada lección',
+      },
+      {
+        icon: 'practice',
+        label: 'Mini test de 10 preguntas',
+        desc: 'Con hoja de respuestas separada, para practicar sin presión',
+      },
+      {
+        icon: 'certificate',
+        label: 'Certificado al finalizar',
+        desc: 'Emitido y verificado digitalmente',
+      },
+      {
+        icon: 'access',
+        label: 'Acceso por 6 meses',
+        desc: 'Repasá cualquier lección las veces que necesites',
+      },
+    ],
+
+    faqs: [
+      {
+        q: '¿Necesito saber algo de inglés para hacer este curso?',
+        a: 'No, es justamente el punto de partida: está pensado para quien nunca estudió inglés o quiere reforzar las bases desde cero.',
+      },
+      {
+        q: '¿Quiénes son Anna y Tom?',
+        a: 'Son los personajes que acompañan las 12 lecciones. Vas siguiendo su historia mientras practicás presentarte, hablar de tu rutina, tu familia y más, en situaciones cotidianas reales.',
+      },
+      {
+        q: '¿Cuánto tiempo lleva completarlo?',
+        a: 'Son 3 módulos con 12 lecciones de 3 a 5 minutos cada una. Cada lección retoma lo aprendido en la anterior, así que rinde ir a tu propio ritmo.',
+      },
+      {
+        q: '¿Desde qué dispositivos puedo verlo?',
+        a: 'Desde cualquier dispositivo con conexión a internet: celular, tablet o computadora.',
+      },
+      {
+        q: '¿Por cuánto tiempo tengo acceso?',
+        a: 'El acceso es por 6 meses. Pagás una vez y podés volver a verlo las veces que quieras.',
+      },
+      {
+        q: '¿El certificado tiene validez?',
+        a: 'Es un certificado emitido por NEXT English Institute, que acredita la finalización del curso.',
+      },
+      {
+        q: '¿Cómo accedo después de pagar?',
+        a: 'Una vez confirmado el pago, recibís un email con tus credenciales de acceso al campus online.',
+      },
+    ],
+
+    seo: {
+      metaTitle: 'English from Zero — Curso Online de Inglés desde Cero',
+      metaDescription:
+        'Aprendé inglés desde cero: gramática y vocabulario esencial en 12 lecciones bilingües con Anna y Tom. Nivel A1, sin conocimientos previos. Certificado incluido.',
+      ogDescription:
+        'Aprendé inglés desde cero: gramática y vocabulario esencial en 12 lecciones bilingües con Anna y Tom. Nivel A1, sin conocimientos previos.',
+      schemaDescription:
+        'Curso de inglés para principiantes absolutos: gramática fundamental y vocabulario esencial construidos de forma progresiva en 12 lecciones bilingües.',
+      educationalLevel: 'Beginner',
+    },
+  },
+  {
     slug: 'english-for-tourism',
     name: 'English for Tourism',
     tagline: 'Inglés para viajar, sin excusas',
