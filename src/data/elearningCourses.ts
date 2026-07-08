@@ -91,7 +91,8 @@ export const elearningCourses: ElearningCourse[] = [
       'El punto de partida ideal si nunca estudiaste inglés o querés reforzar las bases: gramática fundamental y vocabulario esencial en 12 lecciones bilingües, cada una construida sobre la anterior, para que nunca sientas que perdiste el hilo.',
 
     image: {
-      alt: 'Curso online English from Zero, inglés desde cero con lecciones bilingües guiadas por Anna y Tom',
+      src: '/images/elearning/english-from-zero.jpg',
+      alt: 'Alumna tomando una clase online de inglés por videollamada, con notas bilingües de vocabulario básico',
     },
 
     cardPills: ['12 lecciones', '3 módulos', 'Nivel A1'],
