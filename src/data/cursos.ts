@@ -30,10 +30,10 @@ export const cursos: Curso[] = [
     title: 'Básico',
     description:
       'Vocabulario y Gramática base. Se comienza a trabajar en la fluidez oral, comprensión auditiva y expresión escrita para el día a día.',
-    imageAlt: 'Grupo de alumnos básicos conversando en inglés en ronda',
+    imageAlt: 'Grupo de alumnos básicos conversando en inglés en ronda, guiados por la docente',
     imagePrompt:
       'Small group of teenagers having an english conversation class, sitting in a circle, teacher facilitating, warm natural light, candid photography, premium education environment, Argentina',
-    image: '/images/cursos/basico.jpg',
+    image: '/images/cursos/basico-v2.jpg',
   },
   {
     slug: 'Intermedio',
@@ -52,10 +52,10 @@ export const cursos: Curso[] = [
     title: 'Preparación para exámenes',
     description:
       'Cambridge, Oxford, TOEFL e IELTS. Preparación dirigida con simulacros y seguimiento personalizado hasta el examen.',
-    imageAlt: 'Docentes explicando la estructura del examen Cambridge a un alumno',
+    imageAlt: 'Docente del instituto explicando la estructura del examen internacional a una alumna',
     imagePrompt:
       'Teachers explaining Cambridge exam structure to a student, exam model outline on whiteboard, Cambridge Assessment English branding visible, classroom, candid photography, Argentina',
-    image: '/images/cursos/certificacion-v2.jpg',
+    image: '/images/cursos/certificacion-v3.jpg',
   },
 ];
 
