@@ -74,7 +74,7 @@ export default function NextELearning() {
 
                 <div className="flex flex-1 flex-col p-5">
                   <h3 className="mb-1.5 text-base font-bold text-white">{course.name}</h3>
-                  <p className="mb-4 text-sm leading-relaxed text-violet-border/80">
+                  <p className="mb-4 line-clamp-2 text-sm leading-relaxed text-violet-border/80">
                     {course.cardDescription}
                   </p>
 
