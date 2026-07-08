@@ -84,7 +84,7 @@ export const elearningCourses: ElearningCourse[] = [
     tagline: 'Desde cero hasta poder presentarte, contar tu día y describir tu mundo en inglés',
 
     cardDescription:
-      'El curso base de Next English Institute: gramática y vocabulario esencial en 12 lecciones bilingües, paso a paso, con Anna y Tom.',
+      'Gramática y vocabulario esencial en 12 lecciones bilingües, paso a paso, con Anna y Tom.',
 
     heroTitle: 'Desde cero hasta<br />hablar de vos en inglés',
     heroDescription:
@@ -239,7 +239,7 @@ export const elearningCourses: ElearningCourse[] = [
       alt: 'Clase online de inglés para turismo, con vocabulario para el check-in del aeropuerto en pantalla',
     },
 
-    cardPills: ['~1 hora', '3 módulos', 'Subtítulos'],
+    cardPills: ['12 lecciones', '3 módulos', 'Nivel A1-B1'],
     summaryPills: ['3 módulos', 'Subtítulos', 'Certificado', 'Acceso por 6 meses'],
 
     level: 'Principiante',
@@ -369,7 +369,7 @@ export const elearningCourses: ElearningCourse[] = [
     tagline: 'Preparate para tu próxima entrevista de trabajo en inglés',
 
     cardDescription:
-      'Curso práctico de inglés británico para rendir una entrevista laboral con confianza, de la presentación al cierre.',
+      'Curso práctico de inglés británico para rendir una entrevista laboral con confianza.',
 
     heroTitle: 'Tu entrevista en inglés,<br />sin sorpresas',
     heroDescription:
