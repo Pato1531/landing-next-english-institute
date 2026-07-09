@@ -1,15 +1,18 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { SITE, formatARS } from '@/lib/site';
 import ImagePlaceholder from '@/components/ImagePlaceholder';
 import CourseFaqAccordion from '@/components/CourseFaqAccordion';
 import { courseIcons } from '@/components/courseIcons';
+import { PrePaymentModal } from '@/components/checkout/PrePaymentModal';
 import type { ElearningCourse } from '@/data/elearningCourses';
 
 export default function CourseDetailPage({ course }: { course: ElearningCourse }) {
   const priceLabel = `Comprar — ${formatARS(course.price.current)}`;
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-white font-sans text-violet-darker antialiased">
@@ -20,14 +23,13 @@ export default function CourseDetailPage({ course }: { course: ElearningCourse }
           <Link href="/" className="text-sm font-bold text-violet hover:text-violet-dark" aria-label="Volver al inicio">
             ← NEXT English Institute
           </Link>
-          <a
-            href={course.mpLink}
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            type="button"
+            onClick={() => setIsModalOpen(true)}
             className="whitespace-nowrap rounded-lg bg-violet px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-violet-dark"
           >
             {priceLabel}
-          </a>
+          </button>
         </div>
       </header>
 
@@ -64,17 +66,16 @@ export default function CourseDetailPage({ course }: { course: ElearningCourse }
               </span>
             </div>
 
-            <a
-              href={course.mpLink}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              type="button"
+              onClick={() => setIsModalOpen(true)}
               className="inline-flex items-center gap-2 rounded-xl bg-white px-8 py-4 text-base font-bold text-violet transition-all hover:bg-violet-border hover:scale-[1.02]"
             >
               Comprar ahora
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M5 12h14M13 6l6 6-6 6" />
               </svg>
-            </a>
+            </button>
 
             <p className="mt-4 text-xs text-violet-border/50">
               Pago seguro vía Mercado Pago · Acceso inmediato
@@ -197,17 +198,16 @@ export default function CourseDetailPage({ course }: { course: ElearningCourse }
                 {formatARS(course.price.current)} {course.price.currency}
               </span>
             </div>
-            <a
-              href={course.mpLink}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              type="button"
+              onClick={() => setIsModalOpen(true)}
               className="inline-flex items-center gap-2 rounded-xl bg-white px-8 py-4 text-base font-bold text-violet transition-all hover:bg-violet-border hover:scale-[1.02]"
             >
               Comprar ahora
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M5 12h14M13 6l6 6-6 6" />
               </svg>
-            </a>
+            </button>
             <p className="mt-3 text-xs text-violet-border/50">Pago seguro vía Mercado Pago</p>
           </div>
         </section>
@@ -234,14 +234,13 @@ export default function CourseDetailPage({ course }: { course: ElearningCourse }
               Escribinos por WhatsApp y te respondemos al instante.
             </p>
             <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-              <a
-                href={course.mpLink}
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                type="button"
+                onClick={() => setIsModalOpen(true)}
                 className="inline-flex items-center gap-2 rounded-xl bg-violet px-7 py-3.5 text-sm font-bold text-white transition-colors hover:bg-violet-dark"
               >
                 {priceLabel} {course.price.currency}
-              </a>
+              </button>
               <a
                 href={SITE.whatsappUrl(course.whatsappMessage)}
                 target="_blank"
@@ -266,6 +265,13 @@ export default function CourseDetailPage({ course }: { course: ElearningCourse }
           </Link>
         </p>
       </footer>
+
+      <PrePaymentModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        courseSlug={course.slug}
+        courseTitle={course.name}
+      />
 
     </div>
   );
