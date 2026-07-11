@@ -5,9 +5,17 @@
 //
 // Qué hace:
 // 1. Crea (o reutiliza, si el alumno ya compró otro curso antes) el usuario
-//    en Supabase Auth y le envía el email de acceso (magic link).
+//    en Supabase Auth — EN SILENCIO, sin mandar ningún mail en este paso.
 // 2. Da de alta / actualiza su fila en `alumnos`.
 // 3. Crea la `inscripcion` al curso comprado, vinculada a la compra.
+// 4. Manda el código de acceso de 6 dígitos (mismo camino para alumnos
+//    nuevos y recurrentes — así el login siempre funciona igual).
+//
+// Por qué código y no link: los links de un solo uso pueden ser "gastados"
+// por escáneres de seguridad de los proveedores de email (Gmail, Outlook)
+// antes de que el alumno lo toque, dejándolo inválido cuando el alumno
+// intenta entrar de verdad. Un código que el alumno tipea a mano no tiene
+// ese problema — ningún bot completa un formulario por vos.
 //
 // Requiere Service Role Key (ya la tenés cargada, mismo proyecto Landing-Campus-Next).
 
@@ -34,35 +42,27 @@ export async function provisionAlumno({
   const supabase = getSupabaseAdmin();
   const emailNormalizado = email.trim().toLowerCase();
 
-  // URL a la que vuelve el alumno después de tocar el magic link.
-  // Configurar CAMPUS_SITE_URL en Vercel cuando el campus tenga su propio deploy.
-  const redirectTo = `${process.env.CAMPUS_SITE_URL}/auth/callback`;
-
   let alumnoId: string;
   let yaExistia = false;
 
-  // 1) Intentar crear el usuario + disparar el email de invitación/acceso.
-  //    inviteUserByEmail crea el usuario en auth.users Y envía el mail en un solo paso.
-  const { data: inviteData, error: inviteError } =
-    await supabase.auth.admin.inviteUserByEmail(emailNormalizado, {
-      redirectTo,
-      data: { nombre },
+  // 1) Crear el usuario en Auth, sin mandar mail (el mail lo manda el
+  // paso 4, siempre por el mismo camino).
+  const { data: createData, error: createError } =
+    await supabase.auth.admin.createUser({
+      email: emailNormalizado,
+      email_confirm: true,
+      user_metadata: { nombre },
     });
 
-  if (inviteError) {
-    // Caso esperado: el alumno ya existe porque compró otro curso antes.
+  if (createError) {
     const yaRegistrado =
-      inviteError.message?.toLowerCase().includes("already been registered") ||
-      inviteError.status === 422;
+      createError.message?.toLowerCase().includes("already been registered") ||
+      createError.status === 422;
 
-    if (!yaRegistrado) {
-      // Error real (credenciales, red, etc.) -> se propaga para que el webhook lo loguee.
-      throw inviteError;
-    }
+    if (!yaRegistrado) throw createError;
 
     yaExistia = true;
 
-    // Buscar el id del usuario existente por email.
     const { data: usersPage, error: listError } =
       await supabase.auth.admin.listUsers();
     if (listError) throw listError;
@@ -76,19 +76,11 @@ export async function provisionAlumno({
       );
     }
     alumnoId = existente.id;
-
-    // Reenviar el acceso: como ya está registrado, generamos un magic link
-    // de login normal (no invitación) para que entre directo a este nuevo curso.
-    const { error: otpError } = await supabase.auth.signInWithOtp({
-      email: emailNormalizado,
-      options: { emailRedirectTo: redirectTo, shouldCreateUser: false },
-    });
-    if (otpError) throw otpError;
   } else {
-    if (!inviteData.user) {
-      throw new Error("inviteUserByEmail no devolvió el usuario creado");
+    if (!createData.user) {
+      throw new Error("createUser no devolvió el usuario creado");
     }
-    alumnoId = inviteData.user.id;
+    alumnoId = createData.user.id;
   }
 
   // 2) Alta / actualización en alumnos (idempotente)
@@ -108,6 +100,13 @@ export async function provisionAlumno({
       { onConflict: "alumno_id,curso_slug" }
     );
   if (inscripcionError) throw inscripcionError;
+
+  // 4) Mandar el código de acceso de 6 dígitos.
+  const { error: otpError } = await supabase.auth.signInWithOtp({
+    email: emailNormalizado,
+    options: { shouldCreateUser: false },
+  });
+  if (otpError) throw otpError;
 
   return { alumnoId, yaExistia };
 }
