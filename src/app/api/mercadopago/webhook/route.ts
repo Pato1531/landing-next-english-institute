@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { createHmac, timingSafeEqual } from 'node:crypto';
 import { MercadoPagoConfig, Payment } from 'mercadopago';
 import { getSupabaseAdmin } from '@/lib/supabaseAdmin';
+import { provisionAlumno } from '@/lib/campus/provisionAlumno'; // NUEVO
 
 /**
  * POST /api/mercadopago/webhook
@@ -18,10 +19,15 @@ import { getSupabaseAdmin } from '@/lib/supabaseAdmin';
  *    notificación, no podría inventar un pago aprobado — necesitaría que la
  *    consulta a la API real de Mercado Pago también diga "aprobado".
  * 3. Actualizamos compras_pendientes según el resultado.
+ * 4. Si el pago quedó aprobado, damos de alta al alumno en el campus
+ *    (Supabase Auth + tablas alumnos/inscripciones) y le mandamos el
+ *    magic link de acceso. — NUEVO
  *
  * Idempotencia: Mercado Pago puede reenviar la misma notificación varias
  * veces. Como acá solo hacemos un UPDATE por id, recibir la misma
  * notificación dos veces no genera ningún problema ni datos duplicados.
+ * provisionAlumno también es idempotente (upserts), así que reintentos
+ * tampoco duplican al alumno ni la inscripción.
  */
 
 function verifySignature(
@@ -121,20 +127,37 @@ export async function POST(req: NextRequest) {
     const estado = mapMpStatusToEstado(payment.status);
     const supabaseAdmin = getSupabaseAdmin();
 
-    const { error } = await supabaseAdmin
+    // NUEVO: pedimos que nos devuelva la fila actualizada completa,
+    // porque provisionAlumno necesita nombre/email/curso_slug.
+    const { data: compraActualizada, error } = await supabaseAdmin
       .from('compras_pendientes')
       .update({
         estado,
         mp_payment_id: String(payment.id),
         mp_status: payment.status ?? null,
       })
-      .eq('id', compraId);
+      .eq('id', compraId)
+      .select('id, nombre, email, curso_slug')
+      .single();
 
     if (error) {
       console.error('Error actualizando compras_pendientes desde el webhook:', error);
       // Devolvemos 500 para que Mercado Pago reintente más tarde: puede ser
       // un problema transitorio de conexión con Supabase.
       return NextResponse.json({ error: 'update_failed' }, { status: 500 });
+    }
+
+    // NUEVO: si el pago quedó aprobado, damos de alta al alumno en el campus.
+    // Si esto falla, dejamos que el error se propague al catch general:
+    // MP va a reintentar la notificación más tarde, y provisionAlumno es
+    // idempotente, así que un reintento no duplica nada.
+    if (estado === 'aprobado' && compraActualizada) {
+      await provisionAlumno({
+        compraId: compraActualizada.id,
+        nombre: compraActualizada.nombre,
+        email: compraActualizada.email,
+        cursoSlug: compraActualizada.curso_slug,
+      });
     }
 
     return NextResponse.json({ received: true }, { status: 200 });
