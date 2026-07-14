@@ -14,14 +14,17 @@ import type { ElearningCourse } from '@/data/elearningCourses';
 export default function CourseDetailPage({ course }: { course: ElearningCourse }) {
   const priceLabel = `Comprar — ${formatARS(course.price.current)}`;
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [showSuccessBanner, setShowSuccessBanner] = useState(false);
 
   // Si Mercado Pago nos devuelve con "?status=success", es la confirmación
   // de que el pago fue aprobado (auto_return: 'approved' en create-preference).
-  // Se dispara una sola vez y se limpia la URL para no volver a contar el
-  // mismo evento si la persona refresca la página o vuelve con el botón atrás.
+  // Mostramos el banner y disparamos el evento una sola vez, y limpiamos la
+  // URL para no repetirlos si la persona refresca o vuelve con el botón atrás.
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     if (params.get('status') !== 'success') return;
+
+    setShowSuccessBanner(true);
 
     trackEvent('purchase', {
       currency: course.price.currency,
@@ -52,6 +55,35 @@ export default function CourseDetailPage({ course }: { course: ElearningCourse }
           </button>
         </div>
       </header>
+
+      {showSuccessBanner && (
+        <div role="status" aria-live="polite" className="border-b border-green-200 bg-green-50 px-6 py-4">
+          <div className="mx-auto flex max-w-wrap items-start justify-between gap-4">
+            <div className="flex items-start gap-3">
+              <span
+                className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-500 text-xs text-white"
+                aria-hidden="true"
+              >
+                ✓
+              </span>
+              <p className="text-sm leading-relaxed text-green-900">
+                <span className="font-bold">¡Tu inscripción a {course.name} está confirmada!</span>{' '}
+                Revisá tu email en los próximos minutos — ahí vas a recibir el código para entrar al campus.
+              </p>
+            </div>
+            <button
+              type="button"
+              onClick={() => setShowSuccessBanner(false)}
+              aria-label="Cerrar aviso"
+              className="shrink-0 p-1 text-green-700 transition-colors hover:text-green-900"
+            >
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M15 5L5 15M5 5l10 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      )}
 
       <main id="main-content">
 
