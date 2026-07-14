@@ -101,7 +101,7 @@ export const elearningCourses: ElearningCourse[] = [
     level: 'Principiante absoluto (A1)',
     language: 'Inglés británico',
 
-    price: { current: 29000, original: 48000, currency: 'ARS' },
+    price: { current: 31900, original: 54900, currency: 'ARS' },
     mpLink: 'https://mpago.la/2LKDYgc',
     whatsappMessage: 'Hola, tengo una consulta sobre el curso English from Zero',
 
@@ -246,7 +246,7 @@ export const elearningCourses: ElearningCourse[] = [
     level: 'Principiante',
     language: 'Inglés general',
 
-    price: { current: 29000, original: 48000, currency: 'ARS' },
+    price: { current: 31900, original: 54900, currency: 'ARS' },
     mpLink: 'https://mpago.li/1QN6N6w',
     whatsappMessage: 'Hola, tengo una consulta sobre el curso English for Tourism',
 
@@ -387,7 +387,7 @@ export const elearningCourses: ElearningCourse[] = [
     level: 'Principiante a pre-intermedio (A2 → B1)',
     language: 'Inglés británico',
 
-    price: { current: 29000, original: 48000, currency: 'ARS' },
+    price: { current: 31900, original: 54900, currency: 'ARS' },
     mpLink: 'https://mpago.la/2EtErSm',
     whatsappMessage: 'Hola, tengo una consulta sobre el curso Job Ready English',
 
