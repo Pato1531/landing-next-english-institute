@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { trackEvent } from '@/lib/gtag';
 
 /**
  * Modal de captura de datos pre-pago.
@@ -21,6 +22,8 @@ interface PrePaymentModalProps {
   onClose: () => void;
   courseSlug: string;
   courseTitle: string;
+  coursePrice: number;
+  courseCurrency: string;
 }
 
 interface FormErrors {
@@ -30,7 +33,14 @@ interface FormErrors {
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-export function PrePaymentModal({ isOpen, onClose, courseSlug, courseTitle }: PrePaymentModalProps) {
+export function PrePaymentModal({
+  isOpen,
+  onClose,
+  courseSlug,
+  courseTitle,
+  coursePrice,
+  courseCurrency,
+}: PrePaymentModalProps) {
   const [nombre, setNombre] = useState('');
   const [email, setEmail] = useState('');
   const [errors, setErrors] = useState<FormErrors>({});
@@ -116,6 +126,12 @@ export function PrePaymentModal({ isOpen, onClose, courseSlug, courseTitle }: Pr
       if (!res.ok || !data.initPoint) {
         throw new Error(data.error || 'No pudimos iniciar el pago.');
       }
+
+      trackEvent('begin_checkout', {
+        currency: courseCurrency,
+        value: coursePrice,
+        items: courseTitle,
+      });
 
       window.location.href = data.initPoint;
     } catch (err) {
