@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { SITE, formatARS } from '@/lib/site';
@@ -8,11 +8,31 @@ import ImagePlaceholder from '@/components/ImagePlaceholder';
 import CourseFaqAccordion from '@/components/CourseFaqAccordion';
 import { courseIcons } from '@/components/courseIcons';
 import { PrePaymentModal } from '@/components/checkout/PrePaymentModal';
+import { trackEvent } from '@/lib/gtag';
 import type { ElearningCourse } from '@/data/elearningCourses';
 
 export default function CourseDetailPage({ course }: { course: ElearningCourse }) {
   const priceLabel = `Comprar — ${formatARS(course.price.current)}`;
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Si Mercado Pago nos devuelve con "?status=success", es la confirmación
+  // de que el pago fue aprobado (auto_return: 'approved' en create-preference).
+  // Se dispara una sola vez y se limpia la URL para no volver a contar el
+  // mismo evento si la persona refresca la página o vuelve con el botón atrás.
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('status') !== 'success') return;
+
+    trackEvent('purchase', {
+      currency: course.price.currency,
+      value: course.price.current,
+      items: course.name,
+    });
+
+    const url = new URL(window.location.href);
+    url.searchParams.delete('status');
+    window.history.replaceState({}, '', url.toString());
+  }, [course]);
 
   return (
     <div className="min-h-screen bg-white font-sans text-violet-darker antialiased">
@@ -271,6 +291,8 @@ export default function CourseDetailPage({ course }: { course: ElearningCourse }
         onClose={() => setIsModalOpen(false)}
         courseSlug={course.slug}
         courseTitle={course.name}
+        coursePrice={course.price.current}
+        courseCurrency={course.price.currency}
       />
 
     </div>
