@@ -26,18 +26,18 @@ export const testimonios: Testimonio[] = [
     text: 'Excelente instituto, mi hija estudia ahí y la verdad excelente atención, sin ninguna queja, muy buenos profesores. Mi hija aprendió muchísimo.',
   },
   {
-    initials: 'SY',
-    avatarClass: 'av-b',
-    name: 'Sandra Yoeslebert',
-    date: 'dic 2024',
-    text: 'Recomiendo el instituto, mi nena fue este año y seguirá el próximo. Muy lindo lugar y excelente atención con los alumnos y padres. ¡Gracias!',
-  },
-  {
     initials: 'AZ',
     avatarClass: 'av-r',
     name: 'Alvaro J. Zamo',
     date: 'hace 4 días',
     text: 'Buena gente. Buenos profesores.',
+  },
+  {
+    initials: 'SY',
+    avatarClass: 'av-b',
+    name: 'Sandra Yoeslebert',
+    date: 'dic 2024',
+    text: 'Recomiendo el instituto, mi nena fue este año y seguirá el próximo. Muy lindo lugar y excelente atención con los alumnos y padres. ¡Gracias!',
   },
   {
     initials: 'CS',
