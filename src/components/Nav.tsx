@@ -29,11 +29,10 @@ export default function Nav() {
               >
                 {link.label}
               </a>
-            </li>
+          
           ))}
         </ul>
-
-        
+    
           href="#contacto"
           className="shrink-0 rounded-lg bg-violet px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-violet-dark"
         >
