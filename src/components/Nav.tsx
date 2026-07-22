@@ -23,16 +23,17 @@ export default function Nav() {
         <ul className="hidden flex-1 justify-center gap-6 text-sm font-semibold text-violet-darker md:flex">
           {links.map((link) => (
             <li key={link.href}>
-              
+              <a
                 href={link.href}
                 className="border-b-2 border-transparent pb-1 transition-colors hover:text-violet"
               >
                 {link.label}
               </a>
-          
+            </li>
           ))}
         </ul>
-    
+
+        <a
           href="#contacto"
           className="shrink-0 rounded-lg bg-violet px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-violet-dark"
         >
