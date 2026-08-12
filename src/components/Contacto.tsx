@@ -39,7 +39,8 @@ export default function Contacto() {
       <p className="mb-2 text-xs font-bold uppercase tracking-wide text-violet">Hablemos</p>
       <h2 className="mb-1.5 text-2xl font-bold text-violet-darker sm:text-3xl">Contacto</h2>
       <p className="mb-8 max-w-md text-sm leading-relaxed text-ink-secondary">
-        Escribinos por WhatsApp, completá el formulario o visitanos en la sede. Te esperamos.
+        Completá el formulario y te responderemos por WhatsApp para asesorarte y ayudarte a
+        encontrar el curso ideal para vos.
       </p>
 
       <div className="grid gap-10 lg:grid-cols-2">
@@ -154,7 +155,7 @@ export default function Contacto() {
               disabled={pending}
               className="w-fit rounded-xl bg-violet px-8 py-3.5 text-sm font-bold text-white transition-colors hover:bg-violet-dark disabled:opacity-60"
             >
-              Enviar por WhatsApp →
+              Enviar consulta por WhatsApp →
             </button>
           </form>
         </div>

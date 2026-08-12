@@ -15,31 +15,31 @@ const exploreLinks = [
     href: '#cursos',
     tag: 'Academia',
     title: 'Cursos y talleres',
-    desc: 'Conocé los niveles, talleres temáticos y hacé el test de nivel gratuito.',
+    desc: 'Conocé nuestros niveles, talleres temáticos y realizá el test de nivel gratuito.',
   },
   {
     href: '#nosotros',
     tag: 'Institucional',
     title: 'Quiénes somos',
-    desc: 'Nuestra historia, misión y lo que nos diferencia como instituto.',
+    desc: 'Descubrí nuestra historia, misión y qué nos diferencia como instituto.',
   },
   {
     href: '#testimonios',
     tag: 'Opiniones',
     title: 'Testimonios',
-    desc: 'Lo que dicen nuestros alumnos, con reviews reales de Google.',
+    desc: 'Leé reseñas reales de Google y conocé qué piensan quiénes ya estudian en Next.',
   },
   {
     href: '#faq',
     tag: 'Ayuda',
     title: 'Preguntas frecuentes',
-    desc: 'Resolvé tus dudas sobre modalidades, edades, pagos y certificaciones.',
+    desc: 'Encontrá respuestas sobre modalidades, edades, cuotas, certificaciones e inscripciones.',
   },
   {
     href: '#elearning',
     tag: 'Next E-Learning',
     title: 'Cursos online',
-    desc: 'Aprendé inglés desde donde estés. Video, subtítulos, PDF y certificado.',
+    desc: 'Aprendé inglés a tu ritmo con clases en video, subtítulos, material descargable y certificado.',
   },
 ];
 
@@ -54,10 +54,11 @@ export default function HomePage() {
         <section className="mx-auto max-w-wrap border-b border-violet-border px-6 py-12">
           <p className="mb-2 text-xs font-bold uppercase tracking-wide text-violet">Explorá</p>
           <h2 className="mb-1.5 text-2xl font-bold text-violet-darker sm:text-3xl">
-            Todo lo que necesitás saber
+            Todo lo que necesitás para empezar
           </h2>
           <p className="mb-7 text-sm text-ink-secondary">
-            Conocé nuestros cursos, leé opiniones de alumnos o escribinos directamente.
+            Conocé nuestros cursos, descubrí quiénes somos, leé experiencias de alumnos y resolvé
+            todas tus dudas.
           </p>
           <div className="grid gap-4 sm:grid-cols-2">
             {exploreLinks.map((link) => (

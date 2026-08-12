@@ -18,7 +18,7 @@ export const cursos: Curso[] = [
     tag: 'Nivel Inicial',
     title: 'Principiante',
     description:
-      'Ideal si nunca estudiaste inglés o necesitás retomarlo desde el inicio.',
+      'Empezá desde cero o retomá el inglés con una base sólida.',
     imageAlt: 'Alumnos principiantes en clase de inglés practicando vocabulario básico',
     imagePrompt:
       'Modern english classroom, beginner students writing vocabulary, warm lighting, premium education environment, Argentina, candid photography, natural expressions, shallow depth of field',
@@ -29,7 +29,7 @@ export const cursos: Curso[] = [
     tag: 'Herramientas básicas',
     title: 'Básico',
     description:
-      'Vocabulario y Gramática base. Se comienza a trabajar en la fluidez oral, comprensión auditiva y expresión escrita para el día a día.',
+      'Consolidá las bases del idioma y desarrollá la comprensión auditiva, la conversación y la escritura para situaciones cotidianas.',
     imageAlt: 'Grupo de alumnos básicos conversando en inglés en ronda, guiados por la docente',
     imagePrompt:
       'Small group of teenagers having an english conversation class, sitting in a circle, teacher facilitating, warm natural light, candid photography, premium education environment, Argentina',
@@ -40,7 +40,7 @@ export const cursos: Curso[] = [
     tag: 'Fortaleciendo el idioma',
     title: 'Intermedio',
     description:
-      'Se trabaja con material específico, Se comienza a manejar el idioma en todas sus habilidades.',
+      'Desarrollá un dominio más completo del inglés fortaleciendo todas las habilidades del idioma.',
     imageAlt: 'Docente corrigiendo un ejercicio de gramática en el pizarrón junto a una colega',
     imagePrompt:
       'Teacher correcting a grammar exercise on the whiteboard, colleague observing, modern classroom, natural lighting, candid photography, Argentina, shallow depth of field',
@@ -51,7 +51,7 @@ export const cursos: Curso[] = [
     tag: 'Certificación',
     title: 'Preparación para exámenes',
     description:
-      'Cambridge, Oxford, TOEFL e IELTS. Preparación dirigida con simulacros y seguimiento personalizado hasta el examen.',
+      'Preparate para rendir los exámenes de Cambridge, Oxford, TOEFL o IELTS con simulacros, práctica y acompañamiento personalizado.',
     imageAlt: 'Docente del instituto explicando la estructura del examen internacional a una alumna',
     imagePrompt:
       'Teachers explaining Cambridge exam structure to a student, exam model outline on whiteboard, Cambridge Assessment English branding visible, classroom, candid photography, Argentina',

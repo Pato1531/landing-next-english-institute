@@ -80,11 +80,11 @@ export type ElearningCourse = {
 export const elearningCourses: ElearningCourse[] = [
   {
     slug: 'english-from-zero',
-    name: 'English from Zero',
+    name: 'Inglés desde Cero',
     tagline: 'Desde cero hasta poder presentarte, contar tu día y describir tu mundo en inglés',
 
     cardDescription:
-      'Gramática y vocabulario esencial en 12 lecciones bilingües, paso a paso, con Anna y Tom.',
+      'Aprendé inglés desde cero con Anna y Tom. Incorporá la gramática y el vocabulario esencial, paso a paso.',
 
     heroTitle: 'Desde cero hasta<br />hablar de vos en inglés',
     heroDescription:
@@ -103,7 +103,7 @@ export const elearningCourses: ElearningCourse[] = [
 
     price: { current: 31900, original: 54900, currency: 'ARS' },
     mpLink: 'https://mpago.la/2LKDYgc',
-    whatsappMessage: 'Hola, tengo una consulta sobre el curso English from Zero',
+    whatsappMessage: 'Hola, tengo una consulta sobre el curso Inglés desde Cero',
 
     audienceHeading: 'Este curso es para vos si…',
     audience: [
@@ -213,7 +213,7 @@ export const elearningCourses: ElearningCourse[] = [
     ],
 
     seo: {
-      metaTitle: 'English from Zero — Curso Online de Inglés desde Cero',
+      metaTitle: 'Inglés desde Cero — Curso Online para Principiantes',
       metaDescription:
         'Aprendé inglés desde cero: gramática y vocabulario esencial en 12 lecciones bilingües con Anna y Tom. Nivel A1, sin conocimientos previos. Certificado incluido.',
       ogDescription:
@@ -225,11 +225,11 @@ export const elearningCourses: ElearningCourse[] = [
   },
   {
     slug: 'english-for-tourism',
-    name: 'English for Tourism',
+    name: 'Inglés para Viajar',
     tagline: 'Inglés para viajar, sin excusas',
 
     cardDescription:
-      'Comunicarte con confianza en aeropuertos, hoteles y destinos del mundo.',
+      'Viajá con más confianza usando el inglés en situaciones reales. Aprendé a comunicarte en destinos turísticos.',
 
     heroTitle: 'Inglés para viajar,<br />sin excusas',
     heroDescription:
@@ -248,7 +248,7 @@ export const elearningCourses: ElearningCourse[] = [
 
     price: { current: 31900, original: 54900, currency: 'ARS' },
     mpLink: 'https://mpago.li/1QN6N6w',
-    whatsappMessage: 'Hola, tengo una consulta sobre el curso English for Tourism',
+    whatsappMessage: 'Hola, tengo una consulta sobre el curso Inglés para Viajar',
 
     audienceHeading: 'Este curso es para vos si…',
     audience: [
@@ -354,7 +354,7 @@ export const elearningCourses: ElearningCourse[] = [
     ],
 
     seo: {
-      metaTitle: 'English for Tourism — Curso Online',
+      metaTitle: 'Inglés para Viajar — Curso Online',
       metaDescription:
         'Aprendé inglés para viajar desde cero. Video, subtítulos, PDF descargable y certificado. 3 módulos, ~1 hora. Empezá hoy.',
       ogDescription:
@@ -366,11 +366,11 @@ export const elearningCourses: ElearningCourse[] = [
   },
   {
     slug: 'job-ready-english',
-    name: 'Job Ready English',
+    name: 'Inglés para Entrevistas Laborales',
     tagline: 'Preparate para tu próxima entrevista de trabajo en inglés',
 
     cardDescription:
-      'Curso práctico de inglés británico para rendir una entrevista laboral con confianza.',
+      'Preparate para entrevistas laborales en inglés con mayor seguridad.',
 
     heroTitle: 'Tu entrevista en inglés,<br />sin sorpresas',
     heroDescription:
@@ -389,7 +389,7 @@ export const elearningCourses: ElearningCourse[] = [
 
     price: { current: 31900, original: 54900, currency: 'ARS' },
     mpLink: 'https://mpago.la/2EtErSm',
-    whatsappMessage: 'Hola, tengo una consulta sobre el curso Job Ready English',
+    whatsappMessage: 'Hola, tengo una consulta sobre el curso Inglés para Entrevistas Laborales',
 
     audienceHeading: 'Este curso es para vos si…',
     audience: [
@@ -485,7 +485,7 @@ export const elearningCourses: ElearningCourse[] = [
     ],
 
     seo: {
-      metaTitle: 'Job Ready English — Curso Online de Inglés para Entrevistas',
+      metaTitle: 'Inglés para Entrevistas Laborales — Curso Online',
       metaDescription:
         'Preparate para tu entrevista de trabajo en inglés. Inglés británico, guiones bilingües y ejercicios prácticos. 2 módulos, 8 lecciones. Empezá hoy.',
       ogDescription:

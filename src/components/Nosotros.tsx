@@ -15,7 +15,7 @@ const features = [
   },
   {
     title: 'Certificaciones',
-    desc: 'Nuestro programa esta avalado por el C.I.O.L ( Instituto linguistico del Reino Unido ), tiene reconocimiento internacional.',
+    desc: 'Nuestro programa está avalado por Oxford y por el C.I.O.L. (Instituto Lingüístico del Reino Unido), con reconocimiento internacional.',
   },
 ];
 

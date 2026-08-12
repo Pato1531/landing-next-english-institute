@@ -27,8 +27,8 @@ export default function NextELearning() {
               Aprendé inglés<br />desde donde estés
             </h2>
             <p className="max-w-md text-sm leading-relaxed text-violet-border">
-              Cursos 100% online con video, material descargable y certificado.
-              A tu ritmo, cuando quieras.
+              Cursos 100% online con clases en video, material descargable y certificado.
+              Estudiá a tu ritmo, cuando quieras.
             </p>
           </div>
 

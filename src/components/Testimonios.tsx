@@ -46,7 +46,9 @@ export default function Testimonios() {
       <h2 className="mb-1.5 text-2xl font-bold text-violet-darker sm:text-3xl">
         Lo que dicen nuestros alumnos
       </h2>
-      <p className="mb-7 text-sm text-ink-secondary">Opiniones reales verificadas en Google.</p>
+      <p className="mb-7 text-sm text-ink-secondary">
+        Conocé las experiencias de quienes ya aprendieron inglés con nosotros.
+      </p>
 
       <div className="overflow-hidden">
         <div

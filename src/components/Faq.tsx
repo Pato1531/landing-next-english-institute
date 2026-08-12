@@ -14,7 +14,8 @@ export default function Faq() {
         Preguntas frecuentes
       </h2>
       <p className="mb-7 text-sm text-ink-secondary">
-        Las dudas más comunes de quienes están por anotarse.
+        Encontrá respuestas a las consultas más comunes sobre nuestros cursos, modalidades y
+        proceso de inscripción.
       </p>
 
       <div className="flex flex-col gap-2.5">

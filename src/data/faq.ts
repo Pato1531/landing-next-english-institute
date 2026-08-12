@@ -18,14 +18,14 @@ export const faqItems: FaqItem[] = [
       'Ofrecemos las dos modalidades. Podés cursar 100% presencial en nuestra sede de La Unión, Ezeiza, 100% online.',
   },
   {
-    question: '¿A partir de qué edad pueden anotarse?',
+    question: '¿A partir de qué edad se puede estudiar en Next?',
     answer:
-      'Tenemos grupos desde los 6 años, con propuestas adaptadas a cada etapa: niños, adolescentes y adultos cursan por separado, con material y dinámicas pensadas para cada edad.',
+      'Tenemos cursos desde los 6 años. Los grupos se organizan por edad y nivel, para que niños, adolescentes y adultos aprendan con materiales y dinámicas adaptadas a cada etapa.',
   },
   {
     question: '¿Las certificaciones tienen validez internacional?',
     answer:
-      'Sí, nuestro programa tiene recnocimiento internacional avalado por C.I.O.L ( Instituto Linguistico del Reino Unido ).',
+      'Sí, nuestro programa tiene reconocimiento internacional avalado por Oxford y por el C.I.O.L. (Instituto Lingüístico del Reino Unido).',
   },
   {
     question: '¿Cómo son los grupos y cuántos alumnos hay por clase?',

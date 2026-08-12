@@ -1,10 +1,9 @@
 const links = [
-  { href: '#inicio', label: 'Inicio' },
-  { href: '#cursos', label: 'Cursos' },
+  { href: '#cursos', label: 'Cursos y talleres' },
   { href: '#elearning', label: 'E-Learning' },
-  { href: '#nosotros', label: 'Nosotros' },
+  { href: '#nosotros', label: 'Quiénes somos' },
   { href: '#testimonios', label: 'Testimonios' },
-  { href: '#faq', label: 'FAQ' },
+  { href: '#faq', label: 'Preguntas Frecuentes' },
   { href: '#contacto', label: 'Contacto' },
 ];
 

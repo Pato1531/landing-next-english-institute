@@ -32,8 +32,8 @@ export type Slide = {
 export const heroSlides: Slide[] = [
   {
     badge: '📍 Ezeiza Sur · La Unión',
-    heading: 'Clases online y presenciales en La Unión, Ezeiza',
-    sub: 'Clases para todos los niveles y edades desde los 6 años con certificación internacional.',
+    heading: 'Clases presenciales en La Unión, Ezeiza',
+    sub: 'Cursos para niños, adolescentes y adultos, desde los 6 años. Aprendé con una metodología práctica y obtené certificaciones internacionales de Oxford y CIOL.',
     ctaLabel: 'Quiero empezar →',
     ctaHref: '#contacto',
     imageAlt: 'Docente interactuando con alumnos en un aula moderna del instituto',
@@ -44,8 +44,8 @@ export const heroSlides: Slide[] = [
   },
   {
     badge: '🎯 Propuesta especializada',
-    heading: 'Cursos y talleres temáticos: inglés para viajar, TCP, inglés de negocios',
-    sub: 'Inglés con propósito. Aprendés lo que realmente vas a usar.',
+    heading: 'Cursos y talleres',
+    sub: 'Aprendé inglés para situaciones reales: viajes, entrevistas laborales, conversación, pronunciación y mucho más.',
     ctaLabel: 'Ver cursos →',
     ctaHref: '#cursos',
     imageAlt: 'Grupo de alumnos participando de un taller temático de inglés',
@@ -57,7 +57,7 @@ export const heroSlides: Slide[] = [
   {
     badge: '✅ Gratis · Sin compromiso',
     heading: 'Test de nivel gratuito online',
-    sub: 'Hacé el test en línea y te ayudamos a elegir el curso ideal para vos.',
+    sub: 'Descubrí tu nivel en pocos minutos y encontrá el curso ideal para vos. 100% online y sin costo.',
     ctaLabel: 'Hacer el test gratis →',
     ctaHref: '#contacto',
     imageAlt: 'Alumno concentrado realizando el test de nivel de inglés en una notebook',
@@ -68,8 +68,8 @@ export const heroSlides: Slide[] = [
   },
   {
     badge: '🌐 Next E-Learning',
-    heading: 'Aprendé inglés online, a tu ritmo y desde donde estés',
-    sub: 'Cursos 100% online con video, subtítulos, material descargable y certificado. Sin horarios fijos.',
+    heading: 'Cursos online',
+    sub: 'Estudiá a tu ritmo con clases en video, subtítulos, material descargable y certificado al finalizar. Sin horarios fijos.',
     ctaLabel: 'Ver cursos online →',
     ctaHref: '#elearning',
     imageAlt: 'Persona tomando un curso de inglés online desde su computadora',

@@ -23,8 +23,8 @@ export default function Cursos() {
         Cursos, talleres y test de nivel
       </h2>
       <p className="mb-7 max-w-xl text-sm leading-relaxed text-ink-secondary">
-        Elegí tu camino: cursos por nivel, talleres temáticos especializados, o hacé el test
-        gratuito para saber dónde empezar.
+        Elegí la mejor forma de aprender inglés: encontrá tu curso, explorá nuestros talleres o
+        descubrí tu nivel con el test gratuito.
       </p>
 
       <div role="tablist" aria-label="Secciones de cursos" className="mb-8 flex flex-wrap gap-1 border-b border-violet-border">
@@ -77,8 +77,8 @@ export default function Cursos() {
         hidden={active !== 'talleres'}
       >
         <p className="mb-6 text-sm leading-relaxed text-ink-secondary">
-          Inglés con propósito: aprendés exactamente lo que vas a usar, en formato intensivo y con
-          foco práctico.
+          Inglés con propósito: aprendé exactamente lo que necesitás, en un formato intensivo y
+          con un enfoque 100% práctico.
         </p>
         <div className="grid gap-4 sm:grid-cols-2">
           {talleres.map((taller) => (
@@ -96,8 +96,8 @@ export default function Cursos() {
         <div className="rounded-2xl bg-violet-light px-8 py-10 text-center">
           <p className="mb-2.5 text-xl font-bold text-violet-darker">Test de nivel gratuito</p>
           <p className="mx-auto mb-5 max-w-md text-sm leading-relaxed text-ink-secondary">
-            Hacé el test en línea — tarda 15 minutos — y te ayudamos a elegir el curso ideal para
-            vos. Sin compromiso de inscripción.
+            Descubrí tu nivel en solo 15 minutos y recibí una recomendación para elegir el curso
+            ideal para vos. Sin compromiso de inscripción.
           </p>
           <a
             href="#contacto"
