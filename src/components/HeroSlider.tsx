@@ -40,7 +40,7 @@ export default function HeroSlider() {
       id="inicio"
       aria-roledescription="carrusel"
       aria-label="Presentación de Next English Institute"
-      className="relative overflow-hidden"
+      className="relative touch-pan-y overflow-hidden"
     >
       <button
         type="button"
