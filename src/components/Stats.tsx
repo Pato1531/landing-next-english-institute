@@ -89,12 +89,12 @@ export default function Stats() {
       ref={ref}
       role="group"
       aria-label="+1000 alumnos formados, +3 años de experiencia, validez internacional"
-      className="mx-auto flex max-w-wrap flex-col gap-4 border-b border-violet-border px-6 py-10 sm:gap-5"
+      className="mx-auto flex max-w-wrap gap-4 border-b border-violet-border px-6 py-10 sm:gap-5"
     >
       {stats.map((stat, i) => (
         <div
           key={stat.label}
-          className={active ? 'animate-fade-up' : 'opacity-0'}
+          className={`min-w-0 flex-1 ${active ? 'animate-fade-up' : 'opacity-0'}`}
           style={{ animationDelay: `${i * 120}ms` }}
         >
           <StatCard stat={stat} active={active} />
