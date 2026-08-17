@@ -30,3 +30,52 @@ html {
   position: absolute;
   left: -9999px;
 }
+
+/*
+ * Tipografía global del sitio (pedido explícito de Patricio, 16/08):
+ * - Interletrado (letter-spacing) en 0 en todo el sitio.
+ * - Interlineado (line-height) en 1.2 para títulos (h1-h6) y 1.1 para el resto
+ *   del texto (párrafos, listas, etc).
+ * Se usa !important porque varios componentes traen utilidades de Tailwind
+ * (tracking-wide, leading-relaxed, leading-snug...) que por especificidad de
+ * clase le ganarían a una regla de elemento simple. Esta capa es la fuente de
+ * verdad tipográfica única para todo el sitio, sin tener que tocar cada
+ * componente uno por uno.
+ */
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    letter-spacing: 0 !important;
+    line-height: 1.2 !important;
+  }
+
+  body,
+  p,
+  span,
+  a,
+  li,
+  button,
+  label,
+  blockquote,
+  figcaption,
+  td,
+  th,
+  input,
+  textarea,
+  small {
+    letter-spacing: 0 !important;
+  }
+
+  p,
+  li,
+  blockquote,
+  figcaption,
+  td,
+  th {
+    line-height: 1.1 !important;
+  }
+}

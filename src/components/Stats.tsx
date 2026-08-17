@@ -50,11 +50,15 @@ function StatCard({ stat, active }: { stat: Stat; active: boolean }) {
   const display = stat.type === 'counter' ? `+${count}${stat.suffix}` : stat.display;
 
   return (
-    <div className="flex flex-col items-center justify-center rounded-2xl border border-violet-border bg-violet-light px-4 py-7 text-center">
-      <p className="text-3xl font-bold text-violet" aria-hidden="true">
+    <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-violet-darker via-violet-dark to-violet px-6 py-7 text-center sm:px-8">
+      <span
+        aria-hidden
+        className="pointer-events-none absolute -right-6 -top-10 h-28 w-28 rounded-full bg-white/10 sm:h-32 sm:w-32"
+      />
+      <p className="relative z-10 text-3xl font-bold text-white sm:text-4xl" aria-hidden="true">
         {display}
       </p>
-      <p className="mt-1.5 text-sm text-ink-secondary">{stat.label}</p>
+      <p className="relative z-10 mt-1.5 text-sm text-white/85">{stat.label}</p>
     </div>
   );
 }
@@ -85,12 +89,12 @@ export default function Stats() {
       ref={ref}
       role="group"
       aria-label="+1000 alumnos formados, +3 años de experiencia, validez internacional"
-      className="mx-auto flex max-w-wrap gap-4 border-b border-violet-border px-6 py-10 sm:gap-5"
+      className="mx-auto flex max-w-wrap flex-col gap-4 border-b border-violet-border px-6 py-10 sm:gap-5"
     >
       {stats.map((stat, i) => (
         <div
           key={stat.label}
-          className={`min-w-0 flex-1 ${active ? 'animate-fade-up' : 'opacity-0'}`}
+          className={active ? 'animate-fade-up' : 'opacity-0'}
           style={{ animationDelay: `${i * 120}ms` }}
         >
           <StatCard stat={stat} active={active} />
