@@ -80,7 +80,7 @@ export const viewport: Viewport = {
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'EducationalOrganization',
+  '@type': ['EducationalOrganization', 'LocalBusiness'],
   name: SITE.name,
   alternateName: 'Next English',
   description,
@@ -96,6 +96,26 @@ const jsonLd = {
     addressRegion: SITE.address.region,
     addressCountry: SITE.address.country,
   },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: -34.8707248,
+    longitude: -58.5428824,
+  },
+  hasMap: SITE.mapsUrl,
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '10:00',
+      closes: '20:00',
+    },
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: 'Saturday',
+      opens: '10:00',
+      closes: '13:00',
+    },
+  ],
   sameAs: [SITE.instagramUrl],
   areaServed: {
     '@type': 'City',

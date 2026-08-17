@@ -3,12 +3,30 @@
 import { useId, useState } from 'react';
 import { faqItems } from '@/data/faq';
 
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
+
 export default function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
   const baseId = useId();
 
   return (
     <section id="faq" className="mx-auto max-w-wrap scroll-mt-20 border-b border-violet-border px-6 py-12">
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <p className="mb-2 text-xs font-bold uppercase tracking-wide text-violet">Antes de empezar</p>
       <h2 className="mb-1.5 text-2xl font-bold text-violet-darker sm:text-3xl">
         Preguntas frecuentes
