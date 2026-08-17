@@ -44,6 +44,24 @@ const nextConfig = {
       },
     ];
   },
+  // Redirección 301 (permanente) del dominio autogenerado por Vercel hacia el
+  // dominio real. Evita que Google indexe el mismo contenido bajo dos dominios
+  // distintos (landing-next-english-institute.vercel.app vs nextezeiza.com).
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'landing-next-english-institute.vercel.app',
+          },
+        ],
+        destination: 'https://nextezeiza.com/:path*',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
