@@ -32,7 +32,7 @@ export type Slide = {
 export const heroSlides: Slide[] = [
   {
     badge: '📍 Ezeiza Sur · La Unión',
-    heading: 'Clases presenciales en La Unión, Ezeiza',
+    heading: 'Clases presenciales\nen La Unión, Ezeiza',
     sub: 'Cursos para niños, adolescentes y adultos, desde los 6 años. Aprendé con una metodología práctica y obtené certificaciones internacionales de Oxford y CIOL.',
     ctaLabel: 'Quiero empezar →',
     ctaHref: '#contacto',

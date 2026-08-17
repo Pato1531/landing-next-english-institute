@@ -34,8 +34,8 @@ html {
 /*
  * Tipografía global del sitio (pedido explícito de Patricio, 16/08):
  * - Interletrado (letter-spacing) en 0 en todo el sitio.
- * - Interlineado (line-height) en 1.2 para títulos (h1-h6) y 1.1 para el resto
- *   del texto (párrafos, listas, etc).
+ * - Interlineado (line-height) en 1.2 tanto para títulos (h1-h6) como para el
+ *   resto del texto (párrafos, listas, etc).
  * Se usa !important porque varios componentes traen utilidades de Tailwind
  * (tracking-wide, leading-relaxed, leading-snug...) que por especificidad de
  * clase le ganarían a una regla de elemento simple. Esta capa es la fuente de
@@ -76,6 +76,6 @@ html {
   figcaption,
   td,
   th {
-    line-height: 1.1 !important;
+    line-height: 1.2 !important;
   }
 }

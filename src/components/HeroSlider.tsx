@@ -92,7 +92,9 @@ export default function HeroSlider() {
             <span className="relative z-10 w-fit rounded-full bg-white/20 px-3.5 py-1.5 text-xs font-medium text-white backdrop-blur-sm">
               {slide.badge}
             </span>
-            <h1 className="relative z-10 max-w-lg text-2xl font-bold leading-snug text-white drop-shadow sm:text-4xl">
+            <h1
+              className="relative z-10 max-w-lg whitespace-pre-line text-2xl font-bold leading-snug text-white drop-shadow sm:text-4xl"
+            >
               {slide.heading}
             </h1>
             <p className="relative z-10 max-w-md text-sm leading-relaxed text-white/90 drop-shadow sm:text-base">
